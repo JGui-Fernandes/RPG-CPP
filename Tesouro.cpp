@@ -10,14 +10,26 @@ Tesouro::Tesouro(char* novoNome, char* novaDescricao, int novoValor){
     valor = novoValor;
 }
 
-Tesouro::setNome(char* novoNome){
+void Tesouro::setNome(char* novoNome){
     nome = novoNome;
 }
 
-Tesouro::setDescricao(char* novaDescricao){
+void Tesouro::setDescricao(char* novaDescricao){
     this->descricao = novaDescricao;
 }
 
-Tesouro::setValor(int novoValor){
+void Tesouro::setValor(int novoValor){
     this->valor = novoValor;
+}
+
+char* Tesouro::getNome(){
+    return nome;
+}
+
+char* Tesouro::getDescricao(){
+    return descricao;
+}
+
+int Tesouro::getValor(){
+    return valor;
 }
