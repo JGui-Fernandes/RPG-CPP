@@ -33,3 +33,13 @@ char* Provisao::getDescricao(){
 int Provisao::getPV(){
     return pv;
 }
+
+void Provisao::imprimeResumo(){
+    cout << nome << " | " << pv << endl;
+}
+
+void Provisao::imprimeDetalhe(){
+    cout << "Nome: " << nome << endl;
+    cout << "Descricao: " << descricao << endl;
+    cout << "PVs recuperados: " << pv << endl;
+}

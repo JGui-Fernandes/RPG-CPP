@@ -15,11 +15,11 @@ void Tesouro::setNome(char* novoNome){
 }
 
 void Tesouro::setDescricao(char* novaDescricao){
-    this->descricao = novaDescricao;
+    descricao = novaDescricao;
 }
 
 void Tesouro::setValor(int novoValor){
-    this->valor = novoValor;
+    valor = novoValor;
 }
 
 char* Tesouro::getNome(){
@@ -32,4 +32,14 @@ char* Tesouro::getDescricao(){
 
 int Tesouro::getValor(){
     return valor;
+}
+
+void Tesouro::imprimeResumo(){
+    cout << nome << " | " << valor << endl;
+}
+
+void Tesouro::imprimeDetalhe(){
+    cout << "Nome: " << nome << endl;
+    cout << "Descricao: " << descricao << endl;
+    cout << "Valor: " << valor << endl;
 }

@@ -18,6 +18,10 @@ class Provisao{
         char* getDescricao();
         int getPV();
 
+        void imprimeResumo();
+
+        void imprimeDetalhe();
+
     private:
         char* nome;
         char* descricao;

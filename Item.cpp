@@ -52,14 +52,33 @@ void Item::setTipo(TipoItem novoTipo){
     tipo = novoTipo;
 }
 
-void Item::escreveTipo(){
+char* Item::getTipoEscrito(){
     if(tipo == 0){
-        cout << "Item Comum";
+        return "Item Comum";
     }
     if(tipo == 1){
-        cout << "Armadura";
+        return "Armadura";
     }
     if(tipo == 2){
-        cout << "Arma";
+        return "Arma";
+    }
+}
+
+void Item::imprimeResumo(){
+    cout << nome << "   |    " << getTipoEscrito() << endl;
+}
+
+void Item::imprimeDetalhe(){
+    cout << "Nome: " << nome << endl;
+    cout << "Tipo: " << getTipoEscrito() << endl;
+    if(combate){
+        if(tipo == 1){
+            cout << "Desvantagem de ataque do inimigo: " << fa << endl;
+            cout << "Bonus de defesa: " << dano << endl;
+        }
+        if(tipo == 2){
+            cout << "Forca de ataque: " << fa << endl;
+            cout << "Bonus de ataque: " << dano << endl;
+        }
     }
 }

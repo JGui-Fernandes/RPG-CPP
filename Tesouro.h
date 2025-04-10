@@ -17,6 +17,10 @@ class Tesouro{
         char* getDescricao();
         int getValor();
 
+        void imprimeResumo();
+
+        void imprimeDetalhe();
+
     private:
         char* nome;
         char* descricao;

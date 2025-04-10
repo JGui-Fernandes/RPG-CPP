@@ -1,5 +1,5 @@
 enum TipoItem{
-    C,
-    R,
-    W
+    C, //comum
+    R, //armadura
+    W  //arma
 };

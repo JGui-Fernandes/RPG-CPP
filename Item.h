@@ -23,7 +23,11 @@ class Item{
         int getFA();
         int getDano();
 
-        void escreveTipo();
+        char* getTipoEscrito();
+
+        void imprimeResumo();
+
+        void imprimeDetalhe();
 
     private:
 
