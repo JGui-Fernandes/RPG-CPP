@@ -32,10 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Cena.h" />
 		<Unit filename="Item.cpp" />
 		<Unit filename="Item.h" />
-		<Unit filename="Provisao.cpp" />
-		<Unit filename="Provisao.h" />
+		<Unit filename="Monstro.cpp" />
+		<Unit filename="Monstro.h" />
+		<Unit filename="Personagem.cpp" />
+		<Unit filename="Personagem.h" />
 		<Unit filename="Tesouro.cpp" />
 		<Unit filename="Tesouro.h" />
 		<Unit filename="TipoItem.h" />

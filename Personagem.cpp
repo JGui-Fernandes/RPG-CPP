@@ -1,7 +1,9 @@
 #include "Personagem.h"
 
 Personagem::Personagem(){
-
+    qtdeItens = 0;
+    qtdeTesouros = 0;
+    provisoes = 0;
 }
 
 Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte){
@@ -9,6 +11,9 @@ Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int 
     habilidade = novaHabilidade;
     energia = novaEnergia;
     sorte = novaSorte;
+    qtdeItens = 0;
+    qtdeTesouros = 0;
+    provisoes = 0;
 }
 
 char* Personagem::getNome() {
@@ -35,10 +40,6 @@ int Personagem::getQtdeTesouros() {
     return qtdeTesouros;
 }
 
-int Personagem::getQtdeProvisoes() {
-    return qtdeProvisoes;
-}
-
 Item* Personagem::getItem(int index) {
     return itens[index];
 }
@@ -47,8 +48,8 @@ Tesouro* Personagem::getTesouro(int index) {
     return tesouros[index];
 }
 
-Provisao* Personagem::getProvisao(int index) {
-    return provisoes[index];
+int Personagem::getProvisao() {
+    return provisoes;
 }
 
 void Personagem::setNome(char* novoNome) {
@@ -75,10 +76,6 @@ void Personagem::setQtdeTesouros(int qtde) {
     qtdeTesouros = qtde;
 }
 
-void Personagem::setQtdeProvisoes(int qtde) {
-    qtdeProvisoes = qtde;
-}
-
 void Personagem::setItens(Item* novosItens[10]) {
     for (int i = 0; i < 10; i++) {
         itens[i] = novosItens[i];
@@ -91,10 +88,8 @@ void Personagem::setTesouros(Tesouro* novosTesouros[10]) {
     }
 }
 
-void Personagem::setProvisoes(Provisao* novasProvisoes[5]) {
-    for (int i = 0; i < 5; i++) {
-        provisoes[i] = novasProvisoes[i];
-    }
+void Personagem::setProvisoes(int novasProvisoes) {
+    provisoes = novasProvisoes;
 }
 
 void Personagem::adicionaItem(Item* novoItem){
@@ -111,12 +106,6 @@ void Personagem::adicionaTesouro(Tesouro* novoTesouro){
     }
 }
 
-void Personagem::adicionaProvisao(Provisao* novaProvisao){
-    if(qtdeProvisoes < 5){
-        provisoes[qtdeProvisoes] = novaProvisao;
-        qtdeProvisoes++;
-    }
-}
 
 void Personagem::imprimeListaItens(){
     if(qtdeItens == 0){
@@ -144,15 +133,12 @@ void Personagem::imprimeListaTesouros(){
     }
 }
 
-void Personagem::imprimeListaProvisoes(){
-    if(qtdeProvisoes == 0){
-        cout << "Nenhuma provisao registrada no iventario." << endl;
-    } else{
-        cout << "\n Suas provisoes: \n" << endl;
-        for(int i = 0; i < qtdeProvisoes; i++){
-            cout << i << " - " ;
-            provisoes[i]->imprimeResumo();
-            cout << "\n" << endl;
-        }
+void Personagem::consumirProvisao(){
+    if(provisoes > 0){
+        energia += 4;
+        cout << "Energia atual: " << energia << endl;
+    }
+    else{
+        cout << "Sem provisoes para consumo" << endl;
     }
 }

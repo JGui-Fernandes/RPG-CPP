@@ -3,7 +3,6 @@
 
 #include "Item.h"
 #include "Tesouro.h"
-#include "Provisao.h"
 
 using namespace std;
 
@@ -11,7 +10,7 @@ class Personagem{
 
     public:
         Personagem();
-        Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte   );
+        Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte);
 
         char* getNome();
         int getHabilidade();
@@ -22,7 +21,7 @@ class Personagem{
         int getQtdeProvisoes();
         Item* getItem(int index);
         Tesouro* getTesouro(int index);
-        Provisao* getProvisao(int index);
+        int getProvisao();
 
         void setNome(char* novoNome);
         void setHabilidade(int novaHabilidade);
@@ -33,15 +32,15 @@ class Personagem{
         void setQtdeProvisoes(int qtde);
         void setItens(Item* novosItens[10]);
         void setTesouros(Tesouro* novosTesouros[10]);
-        void setProvisoes(Provisao* novasProvisoes[5]);
+        void setProvisoes(int novaProvisao);
 
         void adicionaItem(Item* novoItem);
         void adicionaTesouro(Tesouro* novoTesouro);
-        void adicionaProvisao(Provisao* novaProvisao);
 
         void imprimeListaItens();
         void imprimeListaTesouros();
-        void imprimeListaProvisoes();
+
+        void consumirProvisao();
 
     private:
         char* nome;
@@ -50,6 +49,6 @@ class Personagem{
         int sorte;
         Item* itens[10];
         Tesouro* tesouros[10];
-        Provisao* provisoes[5];
-        int qtdeItens, qtdeTesouros, qtdeProvisoes;
+        int provisoes;
+        int qtdeItens, qtdeTesouros;
 };
