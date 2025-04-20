@@ -10,6 +10,7 @@ class Personagem{
 
     public:
         Personagem();
+        Personagem(bool);
         Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte);
 
         char* getNome();
@@ -37,12 +38,17 @@ class Personagem{
         void adicionaItem(Item* novoItem);
         void adicionaTesouro(Tesouro* novoTesouro);
 
+        void descartarItem(Item novoItem);
+        void descartarTesouro(Tesouro novoTesouro);
+
         void imprimeListaItens();
         void imprimeListaTesouros();
 
         void consumirProvisao();
 
-    private:
+        void imprimeInfo();
+
+   private:
         char* nome;
         int habilidade;
         int energia;
@@ -51,4 +57,6 @@ class Personagem{
         Tesouro* tesouros[10];
         int provisoes;
         int qtdeItens, qtdeTesouros;
+
+        Personagem constroiHeroi();
 };

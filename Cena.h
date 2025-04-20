@@ -16,7 +16,7 @@ class Cena{
 
         void imprimeDescricao();
         void imprimeOpcoes();
-        virtual void imprimeCena();
+        virtual void imprimeCena(){}
 
     private:
         char* descricao;
