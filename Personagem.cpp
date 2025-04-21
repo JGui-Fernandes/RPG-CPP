@@ -4,8 +4,8 @@
 
 Personagem::Personagem(){
     qtdeItens = 0;
-    qtdeTesouros = 0;
     provisoes = 0;
+    tesouro = 0;
 }
 
 Personagem::Personagem(bool heroi){
@@ -19,7 +19,7 @@ Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int 
     energia = novaEnergia;
     sorte = novaSorte;
     qtdeItens = 0;
-    qtdeTesouros = 0;
+    tesouro = 0;
     provisoes = 0;
 }
 
@@ -43,16 +43,12 @@ int Personagem::getQtdeItens() {
     return qtdeItens;
 }
 
-int Personagem::getQtdeTesouros() {
-    return qtdeTesouros;
-}
-
 Item* Personagem::getItem(int index) {
     return itens[index];
 }
 
-Tesouro* Personagem::getTesouro(int index) {
-    return tesouros[index];
+int Personagem::getTesouro() {
+    return tesouro;
 }
 
 int Personagem::getProvisao() {
@@ -79,20 +75,14 @@ void Personagem::setQtdeItens(int qtde) {
     qtdeItens = qtde;
 }
 
-void Personagem::setQtdeTesouros(int qtde) {
-    qtdeTesouros = qtde;
-}
-
 void Personagem::setItens(Item* novosItens[10]) {
     for (int i = 0; i < 10; i++) {
         itens[i] = novosItens[i];
     }
 }
 
-void Personagem::setTesouros(Tesouro* novosTesouros[10]) {
-    for (int i = 0; i < 10; i++) {
-        tesouros[i] = novosTesouros[i];
-    }
+void Personagem::setTesouro(int novoTesouro) {
+    tesouro = novoTesouro;
 }
 
 void Personagem::setProvisoes(int novasProvisoes) {
@@ -103,13 +93,6 @@ void Personagem::adicionaItem(Item* novoItem){
     if(qtdeItens < 10){
         itens[qtdeItens] = novoItem;
         qtdeItens++;
-    }
-}
-
-void Personagem::adicionaTesouro(Tesouro* novoTesouro){
-    if(qtdeTesouros < 10){
-        tesouros[qtdeTesouros] = novoTesouro;
-        qtdeTesouros++;
     }
 }
 
@@ -130,23 +113,6 @@ void Personagem::descartarItem(Item novoItem) {
     }
 }
 
-void Personagem::descartarTesouro(Tesouro novoTesouro) {
-    for (int i = 0; i < qtdeTesouros; i++) {
-        if (strcmp(tesouros[i]->getNome(), novoTesouro.getNome()) == 0) {
-            delete tesouros[i];
-
-            for (int j = i; j < qtdeTesouros - 1; j++) {
-                tesouros[j] = tesouros[j + 1];
-            }
-            tesouros[qtdeTesouros- 1] = nullptr;
-
-            qtdeTesouros--;
-
-            break;
-        }
-    }
-}
-
 void Personagem::imprimeListaItens(){
     if(qtdeItens == 0){
         cout << "Nenhum item registrado no iventario." << endl;
@@ -155,19 +121,6 @@ void Personagem::imprimeListaItens(){
         for(int i = 0; i < qtdeItens; i++){
             cout << i << " - " ;
             itens[i]->imprimeResumo();
-            cout << "\n" << endl;
-        }
-    }
-}
-
-void Personagem::imprimeListaTesouros(){
-    if(qtdeTesouros == 0){
-        cout << "Nenhum tesouro registrado no iventario." << endl;
-    } else{
-        cout << "\n Seus tesouros: \n" << endl;
-        for(int i = 0; i < qtdeTesouros; i++){
-            cout << i << " - " ;
-            tesouros[i]->imprimeResumo();
             cout << "\n" << endl;
         }
     }
@@ -296,6 +249,6 @@ void Personagem::copiaPersonagem(Personagem& outro){
     energia = outro.getEnergia();
     sorte = outro.getSorte();
     qtdeItens = outro.getQtdeItens();
-    qtdeTesouros = outro.getQtdeTesouros();
     provisoes = outro.getProvisao();
+    tesouro = outro.getTesouro();
 }

@@ -9,7 +9,6 @@ int main()
 {
     Cena cena("#1.txt", true);
 
-// Teste
     cena.imprimeOpcoes();
     return 0;
 }

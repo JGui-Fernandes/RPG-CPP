@@ -17,6 +17,8 @@ class CenaMonstro: public Cena{
         Monstro getMonstro();
 
         void imprimeCena();
+
+        void lerMonstro(char* nomeArquivo);
     private:
         Monstro monstro;
 };
