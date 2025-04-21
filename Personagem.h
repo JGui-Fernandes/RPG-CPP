@@ -48,6 +48,8 @@ class Personagem{
 
         void imprimeInfo();
 
+        void copiaPersonagem(Personagem& outro);
+
    private:
         char* nome;
         int habilidade;

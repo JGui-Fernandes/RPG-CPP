@@ -10,12 +10,7 @@ Personagem::Personagem(){
 
 Personagem::Personagem(bool heroi){
     Personagem p = constroiHeroi();
-    nome = p.getNome();
-    energia = p.getEnergia();
-    sorte = p.getSorte();
-    qtdeItens = 0;
-    qtdeTesouros = 0;
-    provisoes = 0;
+    copiaPersonagem(p);
 }
 
 Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte){
@@ -201,13 +196,15 @@ Personagem Personagem::constroiHeroi(){
     int h = 6, e = 12, s = 6;
 
     cout << "Digite o nome do seu heroi: " << endl;
-    cin.ignore();
     cin.getline(n, 50);
 
     cout << "Voce possui 12 pontos de melhoria para distribuir entre seus atributos." << endl;
     int pontosRestantes = 12;
 
-    while(true){
+    bool passou = false;
+
+    passou = false;
+    while(!passou){
         cout << "Voce possui 6 pontos no atributo HABILIDADE. Quantos mais deseja adicionar?" << endl;
         cin >> valor;
         if(valor > pontosRestantes){
@@ -222,11 +219,12 @@ Personagem Personagem::constroiHeroi(){
         else{
             h += valor;
             pontosRestantes -= valor;
-            break;
+            passou = true;
         }
     }
 
-    while(true){
+    passou = false;
+    while(!passou){
         cout << "Voce possui 12 pontos no atributo ENERGIA. Quantos mais deseja adicionar?" << endl;
         cin >> valor;
         if(valor > pontosRestantes){
@@ -241,11 +239,12 @@ Personagem Personagem::constroiHeroi(){
         else{
             e += valor;
             pontosRestantes -= valor;
-            break;
+            passou = true;
         }
     }
 
-    while(true){
+    passou = false;
+    while(!passou){
         cout << "Voce possui 6 pontos no atributo SORTE. Quantos mais deseja adicionar?" << endl;
         cin >> valor;
         if(valor > pontosRestantes){
@@ -260,13 +259,14 @@ Personagem Personagem::constroiHeroi(){
         else{
             s += valor;
             pontosRestantes -= valor;
-            break;
+            passou = true;
         }
     }
 
     Personagem temp(n, h, e, s);
 
-    while(true){
+    passou = false;
+    while(!passou){
         temp.imprimeInfo();
 
         cout << "\nConfirma seus valores? (1 - SIM | 2 - NAO): " << endl;
@@ -274,13 +274,28 @@ Personagem Personagem::constroiHeroi(){
 
         if(valor == 1){
             cout << "Heroi construido com sucesso!\n" << endl;
+            passou = true;
             return temp;
-        } else if(valor == 2){
+        }
+        else if(valor == 2){
             cout << "Construcao de heroi cancelada.\n" << endl;
+            passou = true;
             return Personagem();
-        } else {
+        }
+        else{
             cout << "Digite um valor valido." << endl;
         }
     }
+
+    return Personagem();
 }
 
+void Personagem::copiaPersonagem(Personagem& outro){
+    nome = outro.getNome();
+    habilidade = outro.getHabilidade();
+    energia = outro.getEnergia();
+    sorte = outro.getSorte();
+    qtdeItens = outro.getQtdeItens();
+    qtdeTesouros = outro.getQtdeTesouros();
+    provisoes = outro.getProvisao();
+}
