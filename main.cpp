@@ -1,14 +1,17 @@
 #include <iostream>
 
 #include "Personagem.h"
+#include "CenaMonstro.h"
 #include "Cena.h"
 
 using namespace std;
 
 int main()
 {
-    Cena cena("#1.txt", true);
+    cout << "Teste" << endl;
+    CenaMonstro* cena = new CenaMonstro();
 
-    cena.imprimeOpcoes();
+    cena->imprimeDescricao();
+
     return 0;
 }
