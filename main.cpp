@@ -1,13 +1,15 @@
 #include <iostream>
 
 #include "Personagem.h"
+#include "Cena.h"
 
 using namespace std;
 
 int main()
 {
-    Personagem personagem(true);
+    Cena cena("#1.txt", true);
 
-    personagem.imprimeInfo();
+
+    cena.imprimeOpcoes();
     return 0;
 }

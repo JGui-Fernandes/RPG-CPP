@@ -48,6 +48,7 @@ class Personagem{
 
         void imprimeInfo();
 
+    protected:
         void copiaPersonagem(Personagem& outro);
 
    private:
