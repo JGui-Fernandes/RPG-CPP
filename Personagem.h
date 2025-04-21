@@ -17,11 +17,10 @@ class Personagem{
         int getHabilidade();
         int getEnergia();
         int getSorte();
+        int getTesouro();
         int getQtdeItens();
-        int getQtdeTesouros();
         int getQtdeProvisoes();
         Item* getItem(int index);
-        Tesouro* getTesouro(int index);
         int getProvisao();
 
         void setNome(char* novoNome);
@@ -29,20 +28,16 @@ class Personagem{
         void setEnergia(int novaEnergia);
         void setSorte(int novaSorte);
         void setQtdeItens(int qtde);
-        void setQtdeTesouros(int qtde);
         void setQtdeProvisoes(int qtde);
         void setItens(Item* novosItens[10]);
-        void setTesouros(Tesouro* novosTesouros[10]);
         void setProvisoes(int novaProvisao);
+        void setTesouro(int novoTesouro);
 
         void adicionaItem(Item* novoItem);
-        void adicionaTesouro(Tesouro* novoTesouro);
 
         void descartarItem(Item novoItem);
-        void descartarTesouro(Tesouro novoTesouro);
 
         void imprimeListaItens();
-        void imprimeListaTesouros();
 
         void consumirProvisao();
 
@@ -57,9 +52,9 @@ class Personagem{
         int energia;
         int sorte;
         Item* itens[10];
-        Tesouro* tesouros[10];
+        int tesouro;
         int provisoes;
-        int qtdeItens, qtdeTesouros;
+        int qtdeItens;
 
         Personagem constroiHeroi();
 };
