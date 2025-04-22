@@ -116,49 +116,19 @@ void Cena::lerDescricao(char* nomeArquivo) {
     ifstream entrada(nomeArquivo);
 
     if (!entrada.is_open()) {
-        cerr << "Erro ao abrir o arquivo para ler descrição!" << endl;
+        cerr << "Erro ao abrir o arquivo para ler descricao!" << endl;
         descricao = nullptr;
         return;
     }
 
-    const int MAX_DESCRICAO = 2000;
-    char* bufferDescricao = new char[MAX_DESCRICAO];
-    int indiceDescricao = 0;
-    char proximo;
     string linha = "";
 
-    entrada.get(proximo);
+    getline(entrada, linha);
 
-    while (!entrada.eof()) {
-        linha = "";
+    char* resultado = converteStringParaChar(linha);
 
-        while (proximo != '\n' && !entrada.eof()) {
-            linha += proximo;
-            entrada.get(proximo);
-        }
+    descricao = resultado;
 
-        if (!linha.empty() && linha[0] == '#') {
-            break;
-        }
-
-        if ((indiceDescricao + linha.length() + 1) < MAX_DESCRICAO) {
-            strcpy(&bufferDescricao[indiceDescricao], linha.c_str());
-            indiceDescricao += linha.length();
-            bufferDescricao[indiceDescricao++] = '\n';
-        }
-
-        if (!entrada.eof()) {
-            entrada.get(proximo);
-        }
-    }
-
-    if (indiceDescricao > 0 && bufferDescricao[indiceDescricao - 1] == '\n') {
-        bufferDescricao[indiceDescricao - 1] = '\0';
-    } else {
-        bufferDescricao[indiceDescricao] = '\0';
-    }
-
-    descricao = bufferDescricao;
 
     entrada.close();
 }
@@ -167,7 +137,7 @@ void Cena::lerOpcoes(char* nomeArquivo) {
     ifstream entrada(nomeArquivo);
 
     if (!entrada.is_open()) {
-        cerr << "Erro ao abrir o arquivo para ler opções!" << endl;
+        cerr << "Erro ao abrir o arquivo para ler opcoes!" << endl;
         return;
     }
 
@@ -179,7 +149,8 @@ void Cena::lerOpcoes(char* nomeArquivo) {
             if (countOpcoes < 3) {
                 char* opcao = new char[linha.length() + 1];
                 strcpy(opcao, linha.c_str());
-                opcoes[countOpcoes++] = opcao;
+                opcoes[countOpcoes] = opcao;
+                countOpcoes++;
             }
         }
     }
@@ -189,4 +160,19 @@ void Cena::lerOpcoes(char* nomeArquivo) {
     }
 
     entrada.close();
+}
+
+char* Cena::removeChar(char* texto, char* divisor) {
+    char* pos = strstr(texto, divisor);
+
+    if (pos != nullptr) {
+        char* resultado = pos + strlen(divisor);
+        return resultado;
+    }
+    return texto;
+}
+
+char* Cena::converteStringParaChar(string texto){
+        char* resultado = (char*)malloc(texto.length() + 1);
+        strcpy(resultado, texto.c_str());
 }

@@ -24,3 +24,15 @@ char* Monstro::getDerrota(){
 char* Monstro::getVitoria(){
     return vitoria;
 }
+
+void Monstro::copiaMonstro(Monstro& outro){
+    setNome(outro.getNome());
+    setHabilidade(outro.getHabilidade());
+    setEnergia(outro.getEnergia());
+    setSorte(outro.getSorte());
+    setQtdeItens(outro.getQtdeItens());
+    setProvisoes(outro.getProvisao());
+    setTesouro(outro.getTesouro());
+    vitoria = outro.getVitoria();
+    derrota = outro.getDerrota();
+}

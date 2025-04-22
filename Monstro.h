@@ -15,6 +15,7 @@ class Monstro: public Personagem{
 
         char* getVitoria();
         char* getDerrota();
+        void copiaMonstro(Monstro& outro);
 
     private:
         char* vitoria;

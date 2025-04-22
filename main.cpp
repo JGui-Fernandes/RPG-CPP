@@ -8,10 +8,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Teste" << endl;
-    CenaMonstro* cena = new CenaMonstro();
+    CenaMonstro cena("#2M.txt", true);
 
-    cena->imprimeDescricao();
-
+    cout << "D: " << cena.getMonstro().getDerrota();
     return 0;
 }
