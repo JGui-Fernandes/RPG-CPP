@@ -1,8 +1,9 @@
+#pragma once
+
 #include <string>
 #include <iostream>
 
 #include "Item.h"
-#include "Tesouro.h"
 
 using namespace std;
 

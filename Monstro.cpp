@@ -4,23 +4,35 @@ Monstro::Monstro(){
 
 }
 
-Monstro::Monstro(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, int novaVitoria, int novaDerrota):Personagem(novoNome, novaHabilidade, novaEnergia, novaSorte){
+Monstro::Monstro(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, char* novaVitoria, char* novaDerrota):Personagem(novoNome, novaHabilidade, novaEnergia, novaSorte){
     vitoria = novaVitoria;
     derrota = novaDerrota;
 }
 
-void Monstro::setDerrota(int novaDerrota){
+void Monstro::setDerrota(char* novaDerrota){
     derrota = novaDerrota;
 }
 
-void Monstro::setVitoria(int novaVitoria){
+void Monstro::setVitoria(char* novaVitoria){
     vitoria = novaVitoria;
 }
 
-int Monstro::getDerrota(){
+char* Monstro::getDerrota(){
     return derrota;
 }
 
-int Monstro::getVitoria(){
+char* Monstro::getVitoria(){
     return vitoria;
+}
+
+void Monstro::copiaMonstro(Monstro& outro){
+    setNome(outro.getNome());
+    setHabilidade(outro.getHabilidade());
+    setEnergia(outro.getEnergia());
+    setSorte(outro.getSorte());
+    setQtdeItens(outro.getQtdeItens());
+    setProvisoes(outro.getProvisao());
+    setTesouro(outro.getTesouro());
+    vitoria = outro.getVitoria();
+    derrota = outro.getDerrota();
 }

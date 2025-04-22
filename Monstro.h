@@ -8,15 +8,16 @@ using namespace std;
 class Monstro: public Personagem{
     public:
         Monstro();
-        Monstro(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, int novaVitoria, int novaDerrota);
+        Monstro(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, char* novaVitoria, char* novaDerrota);
 
-        void setVitoria(int novaVitoria);
-        void setDerrota(int novaDerrota);
+        void setVitoria(char* novaVitoria);
+        void setDerrota(char* novaDerrota);
 
-        int getVitoria();
-        int getDerrota();
+        char* getVitoria();
+        char* getDerrota();
+        void copiaMonstro(Monstro& outro);
 
     private:
-        int vitoria;
-        int derrota;
+        char* vitoria;
+        char* derrota;
 };

@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <iostream>
 
@@ -12,6 +14,7 @@ class Cena{
 
         void setDescricao(char* novaDescricao);
         void setOpcoes(char* opcoes[]);
+        void setOpcao(int index, char* novaOpcao);
 
         char* getDescricao();
         char* getOpcao(int index);
@@ -27,9 +30,11 @@ class Cena{
         void lerOpcoes(char* nomeArquivo);
 
         void separarOpcoes(char* entradas[3]);
+        char* converteStringParaChar(string texto);
 
     protected:
         void copiarCena(Cena& outra);
+        char* removeChar(char* texto, char* divisor);
 
     private:
         char* descricao;

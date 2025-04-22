@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="#1.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="#2M.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Cena.cpp" />
 		<Unit filename="Cena.h" />
 		<Unit filename="CenaItem.cpp" />
@@ -45,8 +51,6 @@
 		<Unit filename="Personagem.cpp" />
 		<Unit filename="Personagem.h" />
 		<Unit filename="SalvarHistoria.h" />
-		<Unit filename="Tesouro.cpp" />
-		<Unit filename="Tesouro.h" />
 		<Unit filename="TipoItem.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

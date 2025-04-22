@@ -10,6 +10,7 @@ class CenaMonstro: public Cena{
 
     public:
         CenaMonstro();
+        CenaMonstro(char* nomeArquivo, bool arquivo);
         CenaMonstro(char* novaDescricao, Monstro novoMonstro);
 
         void setMonstro(Monstro novoMonstro);
@@ -18,7 +19,14 @@ class CenaMonstro: public Cena{
 
         void imprimeCena();
 
-        void lerMonstro(char* nomeArquivo);
+        void separaMonstroEDescricao(char* nomeArquivo);
+
+        CenaMonstro lerArquivo(char* nomeArquivo);
+
+        void copiarCenaMonstro(CenaMonstro& cm);
+
     private:
         Monstro monstro;
+
+        int converteCharParaInt(char* texto);
 };
