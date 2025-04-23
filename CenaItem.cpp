@@ -1,7 +1,23 @@
 #include "CenaItem.h"
+#include <fstream>
+#include <string.h>
+#include <cstdlib>
 
 CenaItem::CenaItem(){
 
+}
+
+CenaItem::CenaItem(char* nomeArquivo, bool arquivo){
+    CenaItem ci = lerArquivo(nomeArquivo);
+
+    copiarCenaItem(ci);
+
+    char* temp[3];
+    for (int i = 0; i < 3; i++) {
+        temp[i] = ci.getOpcao(i);
+    }
+
+    separarOpcoes(temp);
 }
 
 CenaItem::CenaItem(char* novaDescricao, Item novoItem): Cena(novaDescricao){
@@ -17,7 +33,7 @@ Item CenaItem::getItem(){
 }
 
 void CenaItem::imprimeCena(){
-    Cena::imprimeCena();
+    imprimeDescricao();
 
     cout << "\n" << endl;
 
@@ -25,5 +41,43 @@ void CenaItem::imprimeCena(){
 
     cout << "\n" << endl;
 
-    Cena::imprimeOpcoes();
+   imprimeOpcoes();
+}
+
+CenaItem CenaItem::lerArquivo(char* nomeArquivo){
+    ifstream entrada(nomeArquivo);
+    CenaItem ci;
+
+    if (!entrada.is_open()) {
+            cerr << "Erro ao abrir o arquivo!" << endl;
+            return CenaItem("", Item());
+    }
+
+    string linha1, linha2;
+
+    getline(entrada, linha1);
+    getline(entrada, linha2);
+
+    char* linha1Final;
+    linha1Final = converteStringParaChar(linha1);
+
+    ci.setDescricao(linha1Final);
+
+    Item i;
+    i.constroiItem(linha2);
+
+
+    ci.setItem(i);
+
+    ci.lerOpcoes(nomeArquivo);
+
+    return ci;
+}
+
+
+
+void CenaItem::copiarCenaItem(CenaItem& cm){
+    copiarCena(cm);
+
+    setItem(cm.getItem());
 }

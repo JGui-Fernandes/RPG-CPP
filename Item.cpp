@@ -1,4 +1,5 @@
 #include "Item.h"
+#include <string.h>
 
 Item::Item(){
 
@@ -52,6 +53,18 @@ void Item::setTipo(TipoItem novoTipo){
     tipo = novoTipo;
 }
 
+void Item::setTipo(char* novoTipo){
+    if(novoTipo[0] == 'c'){
+        setTipo(C);
+    }
+    else if(novoTipo[0] == 'r'){
+        setTipo(R);
+    }
+    else if(novoTipo[0] == 'w'){
+        setTipo(W);
+    }
+}
+
 char* Item::getTipoEscrito(){
     if(tipo == 0){
         return "Item Comum";
@@ -81,4 +94,72 @@ void Item::imprimeDetalhe(){
             cout << "Bonus de ataque: " << dano << endl;
         }
     }
+}
+
+void Item::constroiItem(string texto){
+    int cont = 1;
+
+    string nome = "", tipo = "", combate = "", fa = "", dano = "";
+    for(int i = 0; i < texto.length(); i++){
+        if(texto[i] == ';'){
+            cont++;
+        } else{
+            if(cont == 1){
+                nome += texto[i];
+            }
+            if(cont == 2){
+                tipo += texto[i];
+            }
+            if(cont == 3){
+                combate += texto[i];
+            }
+            if(cont == 4){
+                fa += texto[i];
+            }
+            if(cont == 5){
+                dano += texto[i];
+            }
+        }
+    }
+
+
+    char* nomeFinal = removeChar(converteStringParaChar(nome), "I: ");
+    char* tipoFinal = converteStringParaChar(tipo);
+    int combateFinal = converteStringParaInt(combate), faFinal = converteStringParaInt(fa), danoFinal = converteStringParaInt(dano);
+
+    setNome(nomeFinal);
+    setCombate(combateFinal);
+    setDano(danoFinal);
+    setFA(faFinal);
+    setTipo(tipoFinal);
+}
+
+char* Item::converteStringParaChar(string texto){
+        char* resultado = (char*)malloc(texto.length() + 1);
+        strcpy(resultado, texto.c_str());
+}
+
+
+ int Item::converteCharParaInt(char* texto){
+    char* i = texto;
+    int o = atoi(i);
+
+    return o;
+ }
+
+ int Item::converteStringParaInt(string texto){
+    char* i = converteStringParaChar(texto);
+    int o = converteCharParaInt(i);
+
+    return o;
+ }
+
+ char* Item::removeChar(char* texto, char* divisor) {
+    char* pos = strstr(texto, divisor);
+
+    if (pos != nullptr) {
+        char* resultado = pos + strlen(divisor);
+        return resultado;
+    }
+    return texto;
 }
