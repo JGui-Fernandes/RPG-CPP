@@ -19,6 +19,8 @@ class GerenciadorHistoria{
 
         void abrirCena(char* arquivo);
         char* lerRespostaERetornaCena(Cena* cena);
+        char* lerRespostaERetornaCenaMonstro(CenaMonstro* ce);
+        char* lerRespostaERetornaCenaItem(CenaItem* ce);
 
         void encerrador();
 
@@ -27,7 +29,6 @@ class GerenciadorHistoria{
         void batalha(Personagem* p, Monstro* m);
 
         int getDanoReduzido(Item* armaduras[10], int qtde);
-        int getFaTotal(Personagem* p, bool arma);
 
         Item* escolherAcaoBatalha(Personagem* p, Item* armas[10], Item* armaduras[10], int* qtdeArmas, int *qtdeArmaduras);
 
@@ -38,6 +39,8 @@ class GerenciadorHistoria{
 
         void atacar(Item* arma, int faDefesa, Personagem* ataque, Personagem* defesa);
         void sofrerAtaque(int faDefesa, Personagem* ataque, Personagem* defesa, Item* armaduras[10], int qtdeArmadura);
+
+        void pegarObjeto(Item* item);
 
     private:
         Personagem p;

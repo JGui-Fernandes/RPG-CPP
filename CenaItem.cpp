@@ -20,15 +20,15 @@ CenaItem::CenaItem(char* nomeArquivo, bool arquivo){
     separarOpcoes(temp);
 }
 
-CenaItem::CenaItem(char* novaDescricao, Item novoItem): Cena(novaDescricao){
+CenaItem::CenaItem(char* novaDescricao, Item* novoItem): Cena(novaDescricao){
     item = novoItem;
 }
 
-void CenaItem::setItem(Item novoItem){
+void CenaItem::setItem(Item* novoItem){
     item = novoItem;
 }
 
-Item CenaItem::getItem(){
+Item* CenaItem::getItem(){
     return item;
 }
 
@@ -37,7 +37,7 @@ void CenaItem::imprimeCena(){
 
     cout << "\n" << endl;
 
-    item.imprimeDetalhe();
+    item->imprimeDetalhe();
 
     cout << "\n" << endl;
 
@@ -50,7 +50,7 @@ CenaItem CenaItem::lerArquivo(char* nomeArquivo){
 
     if (!entrada.is_open()) {
             cerr << "Erro ao abrir o arquivo!" << endl;
-            return CenaItem("", Item());
+            return CenaItem("", new Item());
     }
 
     string linha1, linha2;
@@ -63,8 +63,8 @@ CenaItem CenaItem::lerArquivo(char* nomeArquivo){
 
     ci.setDescricao(linha1Final);
 
-    Item i;
-    i.constroiItem(linha2);
+    Item* i = new Item();
+    i->constroiItem(linha2);
 
 
     ci.setItem(i);

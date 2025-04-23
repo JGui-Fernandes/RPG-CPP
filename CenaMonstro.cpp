@@ -21,15 +21,15 @@ CenaMonstro::CenaMonstro(char* nomeArquivo, bool arquivo){
     separarOpcoes(temp);
 }
 
-CenaMonstro::CenaMonstro(char* novaDescricao, Monstro novoMonstro):Cena(novaDescricao){
+CenaMonstro::CenaMonstro(char* novaDescricao, Monstro* novoMonstro):Cena(novaDescricao){
     monstro = novoMonstro;
 }
 
-void CenaMonstro::setMonstro(Monstro novoMonstro){
+void CenaMonstro::setMonstro(Monstro* novoMonstro){
     monstro = novoMonstro;
 }
 
-Monstro CenaMonstro::getMonstro(){
+Monstro* CenaMonstro::getMonstro(){
     return monstro;
 }
 
@@ -38,7 +38,7 @@ void CenaMonstro::imprimeCena(){
 
     cout << "\n" << endl;
 
-    monstro.imprimeInfo();
+    monstro->imprimeInfo();
 
     cout << "\n" << endl;
 
@@ -48,11 +48,11 @@ void CenaMonstro::imprimeCena(){
 CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
         ifstream arquivo(nomeArquivo);
         CenaMonstro cm;
-        Monstro m;
+        Monstro* m = new Monstro();
         Item* i = new Item();
         if (!arquivo.is_open()) {
             cerr << "Erro ao abrir o arquivo!" << endl;
-            return CenaMonstro("", Monstro("", 0, 0, 0, 0, 0));
+            return CenaMonstro("", new Monstro("", 0, 0, 0, 0, 0));
         }
 
         string linha, vitDer, it;
@@ -71,12 +71,12 @@ CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
         }
 
         cm.setDescricao(linhas[0]);
-        m.setNome(linhas[1]);
-        m.setHabilidade(converteCharParaInt(linhas[2]));
-        m.setSorte(converteCharParaInt(linhas[3]));
-        m.setEnergia(converteCharParaInt(linhas[4]));
-        m.setTesouro(converteCharParaInt(linhas[5]));
-        m.setProvisoes(converteCharParaInt(linhas[6]));
+        m->setNome(linhas[1]);
+        m->setHabilidade(converteCharParaInt(linhas[2]));
+        m->setSorte(converteCharParaInt(linhas[3]));
+        m->setEnergia(converteCharParaInt(linhas[4]));
+        m->setTesouro(converteCharParaInt(linhas[5]));
+        m->setProvisoes(converteCharParaInt(linhas[6]));
 
         string v = "#";
         string d = "#";
@@ -101,10 +101,10 @@ CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
         char* charV = converteStringParaChar(v);
         char* charD = converteStringParaChar(d);
 
-        m.setDerrota(charD);
-        m.setVitoria(charV);
+        m->setDerrota(charD);
+        m->setVitoria(charV);
 
-        m.adicionaItem(i);
+        m->adicionaItem(i);
 
         cm.setMonstro(m);
 

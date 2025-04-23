@@ -54,12 +54,13 @@ void GerenciadorHistoria::abrirCena(char* arquivo){
     strcat(arquivoFinal, ".txt");
     if (strchr(arquivoFinal, 'M') != NULL) {
         cm = new CenaMonstro(arquivoFinal, true);
+        cout << "oi" << endl;
         cm->imprimeCena();
-        lerRespostaERetornaCena(cm);
+        lerRespostaERetornaCenaMonstro(cm);
     } else if(strchr(arquivoFinal, 'I') != NULL){
         ci = new CenaItem(arquivoFinal, true);
         ci->imprimeCena();
-        lerRespostaERetornaCena(ci);
+        lerRespostaERetornaCenaItem(ci);
     } else{
         c = new Cena(arquivoFinal, true);
         c->imprimeCena();
@@ -73,6 +74,59 @@ char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
     cout << "Digite a opcao desejada:" << endl;
 
     cin >> escolha;
+
+    switch(escolha){
+        case 0:
+            cout << "Ainda nao implementado" << endl;
+            lerRespostaERetornaCena(ce);
+        case 1:
+            abrirCena(ce->getProximaCena(0));
+        case 2:
+            abrirCena(ce->getProximaCena(1));
+        case 3:
+            abrirCena(ce->getProximaCena(2));
+        default:
+            cout << "Digite um valor valido\n" << endl;
+            lerRespostaERetornaCena(ce);
+    }
+}
+
+char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
+    int escolha;
+    cout << "0) Acessar Inventario\n" << endl;
+    cout << "Digite a opcao desejada:" << endl;
+
+    cin >> escolha;
+
+    if(strcmp(ce->getOpcao(escolha), "Lutar")){
+        batalha(&p, ce->getMonstro());
+    }
+    switch(escolha){
+        case 0:
+            cout << "Ainda nao implementado" << endl;
+            lerRespostaERetornaCena(ce);
+        case 1:
+            abrirCena(ce->getProximaCena(0));
+        case 2:
+            abrirCena(ce->getProximaCena(1));
+        case 3:
+            abrirCena(ce->getProximaCena(2));
+        default:
+            cout << "Digite um valor valido\n" << endl;
+            lerRespostaERetornaCena(ce);
+    }
+}
+
+char* GerenciadorHistoria::lerRespostaERetornaCenaItem(CenaItem* ce){
+    int escolha;
+    cout << "0) Acessar Inventario\n" << endl;
+    cout << "Digite a opcao desejada:" << endl;
+
+    cin >> escolha;
+
+    if(strcmp(ce->getOpcao(escolha), "Pegar")){
+        pegarObjeto(ce->getItem());
+    }
 
     switch(escolha){
         case 0:
@@ -177,12 +231,6 @@ int GerenciadorHistoria::getDanoReduzido(Item* armaduras[10], int qtde){
     return dano;
 }
 
-int GerenciadorHistoria::getFaTotal(Personagem* p, bool arma){
-    int fa = 0;
-
-
-}
-
 Item* GerenciadorHistoria::escolherAcaoBatalha(Personagem* p, Item* armas[10], Item* armaduras[10], int* qtdeArmas, int *qtdeArmaduras){
     int resposta = 0;
 
@@ -281,4 +329,9 @@ void GerenciadorHistoria::sofrerAtaque(int faDefesa, Personagem* ataque, Persona
     else{
         cout << "Errou o golpe!\n" << endl;
     }
+}
+
+void GerenciadorHistoria::pegarObjeto(Item* item){
+    cout << "\n\nItem recolhido!\n" << endl;
+    p.adicionaItem(item);
 }
