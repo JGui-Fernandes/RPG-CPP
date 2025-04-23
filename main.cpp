@@ -1,14 +1,34 @@
 #include <iostream>
 
 #include "GerenciadorHistoria.h"
+#include "Personagem.h"
+#include "Monstro.h"
+#include "Item.h"
 
 using namespace std;
 
 int main()
 {
-    GerenciadorHistoria gerenciador;
+    GerenciadorHistoria gerenciador;
 
     gerenciador.iniciador();
+
+
+
+
+    Personagem* p = new Personagem("joao", 10, 12, 10);
+    Monstro* m = new Monstro("orc", 10, 6, 6, "#1", "#3");
+    Item* i = new Item("Espada", W, true, 3, 3);
+    Item* i1 = new Item("Espada", C, true, 3, 3);
+    Item* i2 = new Item("Arco", W, true, 3, 2);
+
+    p->adicionaItem(i);
+    p->adicionaItem(i1);
+    p->adicionaItem(i2);
+    p->setProvisoes(3);
+
+
+    //gerenciador.batalha(p, m);
 
     return 0;
 }
