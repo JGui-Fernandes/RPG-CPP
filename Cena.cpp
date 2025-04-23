@@ -4,10 +4,13 @@
 
 Cena::Cena(){
     descricao = nullptr;
+    qtdeOpcoes = 0;
     for(int i = 0; i < 3; i++){
         opcoes[i] = nullptr;
+        proximaCena[i] = nullptr;
     }
 }
+
 
 Cena::Cena(char* nomeArquivo, bool arquivo){
     Cena c = lerArquivo(nomeArquivo);
@@ -48,8 +51,8 @@ void Cena::imprimeDescricao(){
 }
 
 void Cena::imprimeOpcoes(){
-    for(int i = 0; i < 3; i++){
-        if(strcmp(opcoes[i], "") == 0 || strcmp(opcoes[i], " ") == 0){
+    for(int i = 0; i < getQtdeOpcoes(); i++){
+        if(strlen(opcoes[i]) == 0) {
             break;
         }
         cout << i+1 << ") " << opcoes[i] << endl;
@@ -68,11 +71,13 @@ Cena Cena::lerArquivo(char* nomeArquivo) {
 
 void Cena::copiarCena(Cena& outra){
     descricao = outra.getDescricao();
+    qtdeOpcoes = outra.getQtdeOpcoes();
     for(int i = 0; i < 3; i++){
         opcoes[i] = outra.getOpcao(i);
         proximaCena[i] = outra.getProximaCena(i);
     }
 }
+
 
 char* Cena::getOpcao(int index){
     return opcoes[index];
@@ -142,20 +147,20 @@ void Cena::lerOpcoes(char* nomeArquivo) {
     }
 
     string linha;
-    int countOpcoes = 0;
+    qtdeOpcoes = 0;
 
     while (getline(entrada, linha)) {
         if (!linha.empty() && linha[0] == '#') {
-            if (countOpcoes < 3) {
+            if (qtdeOpcoes < 3) {
                 char* opcao = new char[linha.length() + 1];
                 strcpy(opcao, linha.c_str());
-                opcoes[countOpcoes] = opcao;
-                countOpcoes++;
+                opcoes[qtdeOpcoes] = opcao;
+                qtdeOpcoes++;
             }
         }
     }
 
-    for (int i = countOpcoes; i < 3; i++) {
+    for (int i = qtdeOpcoes; i < 3; i++) {
        opcoes[i] = nullptr;
     }
 
@@ -191,3 +196,19 @@ char* Cena::converteStringParaChar(string texto){
 
     return o;
  }
+
+ void Cena::imprimeCena(){
+    imprimeDescricao();
+
+    cout << "\n" << endl;
+
+    imprimeOpcoes();
+ }
+
+void Cena::setQtdeOpcoes(int novaQtdeOpcoes){
+    qtdeOpcoes = novaQtdeOpcoes;
+}
+
+int Cena::getQtdeOpcoes(){
+    return qtdeOpcoes;
+}

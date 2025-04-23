@@ -8,8 +8,8 @@ Personagem::Personagem(){
     tesouro = 0;
 }
 
-Personagem::Personagem(bool heroi){
-    Personagem p = constroiHeroi();
+Personagem::Personagem(bool* heroi){
+    Personagem p = constroiHeroi(heroi);
     copiaPersonagem(p);
 }
 
@@ -130,6 +130,7 @@ void Personagem::consumirProvisao(){
     if(provisoes > 0){
         energia += 4;
         cout << "Energia atual: " << energia << endl;
+        provisoes--;
     }
     else{
         cout << "Sem provisoes para consumo" << endl;
@@ -143,12 +144,13 @@ void Personagem::imprimeInfo(){
     cout << "Sorte: " << sorte << endl;
 }
 
-Personagem Personagem::constroiHeroi(){
+Personagem Personagem::constroiHeroi(bool* resposta){
     int valor;
     char n[50];
     int h = 6, e = 12, s = 6;
 
     cout << "Digite o nome do seu heroi: " << endl;
+    cin.ignore();
     cin.getline(n, 50);
 
     cout << "Voce possui 12 pontos de melhoria para distribuir entre seus atributos." << endl;
@@ -228,11 +230,13 @@ Personagem Personagem::constroiHeroi(){
         if(valor == 1){
             cout << "Heroi construido com sucesso!\n" << endl;
             passou = true;
+            *resposta = true;
             return temp;
         }
         else if(valor == 2){
             cout << "Construcao de heroi cancelada.\n" << endl;
             passou = true;
+            *resposta = false;
             return Personagem();
         }
         else{
@@ -251,4 +255,8 @@ void Personagem::copiaPersonagem(Personagem& outro){
     qtdeItens = outro.getQtdeItens();
     provisoes = outro.getProvisao();
     tesouro = outro.getTesouro();
+}
+
+void Personagem::perderEnergia(int perda){
+    energia -= perda;
 }

@@ -11,7 +11,7 @@ class Personagem{
 
     public:
         Personagem();
-        Personagem(bool);
+        Personagem(bool*);
         Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte);
 
         char* getNome();
@@ -42,8 +42,11 @@ class Personagem{
 
         void consumirProvisao();
 
+        void perderEnergia(int perda);
+
         void imprimeInfo();
 
+        Personagem constroiHeroi(bool*);
     protected:
         void copiaPersonagem(Personagem& outro);
 
@@ -57,5 +60,4 @@ class Personagem{
         int provisoes;
         int qtdeItens;
 
-        Personagem constroiHeroi();
 };

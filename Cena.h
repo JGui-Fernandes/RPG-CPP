@@ -12,17 +12,21 @@ class Cena{
         Cena(char* nomeArquivo, bool arquivo);
         Cena(char* novaDescricao);
 
+        virtual ~Cena(){}
+
         void setDescricao(char* novaDescricao);
         void setOpcoes(char* opcoes[]);
         void setOpcao(int index, char* novaOpcao);
+        void setQtdeOpcoes(int novaQtdeOpcoes);
 
         char* getDescricao();
         char* getOpcao(int index);
         char* getProximaCena(int index);
+        int getQtdeOpcoes();
 
         void imprimeDescricao();
         void imprimeOpcoes();
-        virtual void imprimeCena(){}
+        void imprimeCena();
 
         Cena lerArquivo(char* nomeArquivo);
 
@@ -42,5 +46,6 @@ class Cena{
         char* descricao;
         char* opcoes[3];
         char* proximaCena[3];
+        int qtdeOpcoes;
 
 };

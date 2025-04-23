@@ -11,11 +11,11 @@ class CenaMonstro: public Cena{
     public:
         CenaMonstro();
         CenaMonstro(char* nomeArquivo, bool arquivo);
-        CenaMonstro(char* novaDescricao, Monstro novoMonstro);
+        CenaMonstro(char* novaDescricao, Monstro* novoMonstro);
 
-        void setMonstro(Monstro novoMonstro);
+        void setMonstro(Monstro* novoMonstro);
 
-        Monstro getMonstro();
+        Monstro* getMonstro();
 
         void imprimeCena();
 
@@ -24,5 +24,5 @@ class CenaMonstro: public Cena{
         void copiarCenaMonstro(CenaMonstro& cm);
 
     private:
-        Monstro monstro;
+        Monstro* monstro;
 };

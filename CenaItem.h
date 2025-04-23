@@ -11,11 +11,11 @@ class CenaItem: public Cena{
     public:
         CenaItem();
         CenaItem(char* nomeArquivo, bool arquivo);
-        CenaItem(char* novaDescricao, Item novoItem);
+        CenaItem(char* novaDescricao, Item* novoItem);
 
-        void setItem(Item item);
+        void setItem(Item* item);
 
-        Item getItem();
+        Item* getItem();
 
         void imprimeCena();
 
@@ -24,5 +24,5 @@ class CenaItem: public Cena{
         void copiarCenaItem(CenaItem& cm);
 
     private:
-        Item item;
+        Item* item;
 };

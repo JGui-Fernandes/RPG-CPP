@@ -38,12 +38,20 @@
 		<Unit filename="#2M.txt">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="#3.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="#4I.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Cena.cpp" />
 		<Unit filename="Cena.h" />
 		<Unit filename="CenaItem.cpp" />
 		<Unit filename="CenaItem.h" />
 		<Unit filename="CenaMonstro.cpp" />
 		<Unit filename="CenaMonstro.h" />
+		<Unit filename="GerenciadorHistoria.cpp" />
+		<Unit filename="GerenciadorHistoria.h" />
 		<Unit filename="Item.cpp" />
 		<Unit filename="Item.h" />
 		<Unit filename="Monstro.cpp" />

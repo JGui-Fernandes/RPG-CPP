@@ -18,9 +18,6 @@ class SalvarHistoria{
         Personagem getPersonagem();
         Cena* getCena(int index);
 
-
-
-
     private:
         Personagem personagem;
         Cena* cenas[10];
