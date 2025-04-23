@@ -1,19 +1,14 @@
 #include <iostream>
 
-#include "Personagem.h"
-#include "CenaMonstro.h"
-#include "CenaItem.h"
-#include "Cena.h"
+#include "GerenciadorHistoria.h"
 
 using namespace std;
 
 int main()
 {
-    CenaMonstro cena("#2M.txt", true);
+    GerenciadorHistoria gerenciador;
 
-    cout << cena.getMonstro().getQtdeItens();
-
-    cena.getMonstro().imprimeListaItens();
+    gerenciador.iniciador();
 
     return 0;
 }

@@ -149,6 +149,7 @@ Personagem Personagem::constroiHeroi(){
     int h = 6, e = 12, s = 6;
 
     cout << "Digite o nome do seu heroi: " << endl;
+    cin.ignore();
     cin.getline(n, 50);
 
     cout << "Voce possui 12 pontos de melhoria para distribuir entre seus atributos." << endl;

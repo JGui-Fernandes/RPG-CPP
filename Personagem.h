@@ -44,6 +44,7 @@ class Personagem{
 
         void imprimeInfo();
 
+        Personagem constroiHeroi();
     protected:
         void copiaPersonagem(Personagem& outro);
 
@@ -57,5 +58,4 @@ class Personagem{
         int provisoes;
         int qtdeItens;
 
-        Personagem constroiHeroi();
 };
