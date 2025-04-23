@@ -19,14 +19,10 @@ class CenaMonstro: public Cena{
 
         void imprimeCena();
 
-        void separaMonstroEDescricao(char* nomeArquivo);
-
         CenaMonstro lerArquivo(char* nomeArquivo);
 
         void copiarCenaMonstro(CenaMonstro& cm);
 
     private:
         Monstro monstro;
-
-        int converteCharParaInt(char* texto);
 };

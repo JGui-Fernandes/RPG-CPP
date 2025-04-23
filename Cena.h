@@ -31,6 +31,8 @@ class Cena{
 
         void separarOpcoes(char* entradas[3]);
         char* converteStringParaChar(string texto);
+        int converteCharParaInt(char* texto);
+        int converteStringParaInt(string texto);
 
     protected:
         void copiarCena(Cena& outra);

@@ -15,6 +15,7 @@ class Item{
 
         void setNome(char*);
         void setTipo(TipoItem);
+        void setTipo(char*);
         void setCombate(bool);
         void setFA(int);
         void setDano(int);
@@ -30,6 +31,13 @@ class Item{
         void imprimeResumo();
 
         void imprimeDetalhe();
+
+        void constroiItem(string texto);
+
+        char* converteStringParaChar(string texto);
+        int converteCharParaInt(char* texto);
+        int converteStringParaInt(string texto);
+        char* removeChar(char* texto, char* divisor);
 
     private:
 

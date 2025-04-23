@@ -176,3 +176,18 @@ char* Cena::converteStringParaChar(string texto){
         char* resultado = (char*)malloc(texto.length() + 1);
         strcpy(resultado, texto.c_str());
 }
+
+
+ int Cena::converteCharParaInt(char* texto){
+    char* i = texto;
+    int o = atoi(i);
+
+    return o;
+ }
+
+ int Cena::converteStringParaInt(string texto){
+    char* i = converteStringParaChar(texto);
+    int o = converteCharParaInt(i);
+
+    return o;
+ }

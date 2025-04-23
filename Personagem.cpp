@@ -119,7 +119,7 @@ void Personagem::imprimeListaItens(){
     } else{
         cout << "\n Seus itens: \n" << endl;
         for(int i = 0; i < qtdeItens; i++){
-            cout << i << " - " ;
+            cout << i+1 << " - " ;
             itens[i]->imprimeResumo();
             cout << "\n" << endl;
         }

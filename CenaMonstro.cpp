@@ -45,36 +45,24 @@ void CenaMonstro::imprimeCena(){
     imprimeOpcoes();
 }
 
-void CenaMonstro::separaMonstroEDescricao(char* texto) {
-    char* separador = strstr(texto, "N:");
-    char* desc = nullptr;
-    char* resto = nullptr;
-    if (separador != nullptr) {
-        int tamanhoDescricao = separador - texto;
-        strncpy(desc, texto, tamanhoDescricao);
-        desc[tamanhoDescricao] = '\0';
-        setDescricao(desc);
-    }
-
-    resto = removeChar(texto, desc);
-
-
-}
-
 CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
         ifstream arquivo(nomeArquivo);
         CenaMonstro cm;
         Monstro m;
+        Item* i = new Item();
         if (!arquivo.is_open()) {
             cerr << "Erro ao abrir o arquivo!" << endl;
             return CenaMonstro("", Monstro("", 0, 0, 0, 0, 0));
         }
 
-        string linha, vitDer;
+        string linha, vitDer, it;
         char* linhas[12];
 
         for(int i = 0; i < 12; i++){
             getline(arquivo, linha);
+            if(i == 7){
+                it = linha;
+            }
             if(i == 8){
                 vitDer = linha;
             }
@@ -108,11 +96,15 @@ CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
 
         }
 
+        i->constroiItem(it);
+
         char* charV = converteStringParaChar(v);
         char* charD = converteStringParaChar(d);
 
         m.setDerrota(charD);
         m.setVitoria(charV);
+
+        m.adicionaItem(i);
 
         cm.setMonstro(m);
 
@@ -127,10 +119,3 @@ void CenaMonstro::copiarCenaMonstro(CenaMonstro& cm){
 
     setMonstro(cm.getMonstro());
 }
-
- int CenaMonstro::converteCharParaInt(char* texto){
-    char* i = texto;
-    int o = atoi(i);
-
-    return o;
- }

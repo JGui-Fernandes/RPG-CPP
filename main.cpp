@@ -2,6 +2,7 @@
 
 #include "Personagem.h"
 #include "CenaMonstro.h"
+#include "CenaItem.h"
 #include "Cena.h"
 
 using namespace std;
@@ -10,6 +11,9 @@ int main()
 {
     CenaMonstro cena("#2M.txt", true);
 
-    cout << "D: " << cena.getMonstro().getDerrota();
+    cout << cena.getMonstro().getQtdeItens();
+
+    cena.getMonstro().imprimeListaItens();
+
     return 0;
 }
