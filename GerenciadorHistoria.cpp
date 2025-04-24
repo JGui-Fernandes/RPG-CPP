@@ -35,6 +35,7 @@ void GerenciadorHistoria::iniciarJogo(){
 
     bool resposta;
     p = p.constroiHeroi(&resposta);
+    p.setProvisoes(5);
 
     if(resposta){
         abrirCena("#1");
@@ -54,30 +55,28 @@ void GerenciadorHistoria::abrirCena(char* arquivo){
     strcat(arquivoFinal, ".txt");
     if (strchr(arquivoFinal, 'M') != NULL) {
         cm = new CenaMonstro(arquivoFinal, true);
-        cout << "oi" << endl;
-        cm->imprimeCena();
         lerRespostaERetornaCenaMonstro(cm);
     } else if(strchr(arquivoFinal, 'I') != NULL){
         ci = new CenaItem(arquivoFinal, true);
-        ci->imprimeCena();
         lerRespostaERetornaCenaItem(ci);
     } else{
         c = new Cena(arquivoFinal, true);
-        c->imprimeCena();
         lerRespostaERetornaCena(c);
     }
 }
 
 char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
-    int escolha;
+    ce->imprimeDescricao();
+    ce->imprimeOpcoes();
     cout << "0) Acessar Inventario\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
+    int escolha;
     cin >> escolha;
 
     switch(escolha){
         case 0:
-            cout << "Ainda nao implementado" << endl;
+            abrirInventario();
             lerRespostaERetornaCena(ce);
         case 1:
             abrirCena(ce->getProximaCena(0));
@@ -92,19 +91,23 @@ char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
 }
 
 char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
-    int escolha;
+    ce->imprimeDescricao();
+    ce->getMonstro()->imprimeInfo();
+    ce->imprimeOpcoes();
     cout << "0) Acessar Inventario\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
+    int escolha;
     cin >> escolha;
 
-    if(strcmp(ce->getOpcao(escolha), "Lutar")){
+
+    if(strcmp(ce->getOpcao(escolha-1), "Lutar")==0){
         batalha(&p, ce->getMonstro());
     }
     switch(escolha){
         case 0:
-            cout << "Ainda nao implementado" << endl;
-            lerRespostaERetornaCena(ce);
+            abrirInventario();
+            lerRespostaERetornaCenaMonstro(ce);
         case 1:
             abrirCena(ce->getProximaCena(0));
         case 2:
@@ -118,20 +121,24 @@ char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
 }
 
 char* GerenciadorHistoria::lerRespostaERetornaCenaItem(CenaItem* ce){
-    int escolha;
+    ce->imprimeDescricao();
+    ce->getItem()->imprimeResumo();
+    ce->imprimeOpcoes();
     cout << "0) Acessar Inventario\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
+    int escolha;
     cin >> escolha;
 
-    if(strcmp(ce->getOpcao(escolha), "Pegar")){
+
+    if(strcmp(ce->getOpcao(escolha-1), "Pegar")==0){
         pegarObjeto(ce->getItem());
     }
 
     switch(escolha){
         case 0:
-            cout << "Ainda nao implementado" << endl;
-            lerRespostaERetornaCena(ce);
+            abrirInventario();
+            lerRespostaERetornaCenaItem(ce);
         case 1:
             abrirCena(ce->getProximaCena(0));
         case 2:
@@ -334,4 +341,55 @@ void GerenciadorHistoria::sofrerAtaque(int faDefesa, Personagem* ataque, Persona
 void GerenciadorHistoria::pegarObjeto(Item* item){
     cout << "\n\nItem recolhido!\n" << endl;
     p.adicionaItem(item);
+}
+
+int GerenciadorHistoria::abrirInventario(){
+    int decisao = -1, i = -1;
+
+    while(decisao != 0){
+        cout << "\n------------------------------\n" << endl;
+
+        cout << "Provisoes: " << p.getProvisao() << "\n" << endl;
+
+        p.imprimeListaItens();
+
+        cout << "\n------------------------------\n" << endl;
+
+
+        cout << "1) Remover um item do inventario " << endl;
+        cout << "2) Detalhar item" << endl;
+        cout << "0) Voltar" << endl;
+
+        cin >> decisao;
+
+        if(decisao == 1){
+            while(i < 0 || i > p.getQtdeItens()){
+                p.imprimeListaItens();
+
+                cout << "Digite o ID do item que deseja remover:\n" << endl;
+                cin >> i;
+
+                if(i > 0 && i < p.getQtdeItens()){
+                    break;
+                }
+
+            }
+            p.descartarItem(i-1);
+        }
+        if(decisao == 2){
+            while(i < 0 || i > p.getQtdeItens()){
+                p.imprimeListaItens();
+
+                cout << "Digite o ID do item que deseja remover:\n" << endl;
+                cin >> i;
+                if(i > 0 && i < p.getQtdeItens()){
+                    break;
+                }
+            }
+            p.getItem(i-1)->imprimeDetalhe();
+        }
+    }
+
+    return 0;
+
 }

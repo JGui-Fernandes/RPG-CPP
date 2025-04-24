@@ -36,7 +36,7 @@ class Personagem{
 
         void adicionaItem(Item* novoItem);
 
-        void descartarItem(Item novoItem);
+        void descartarItem(int index);
 
         void imprimeListaItens();
 
