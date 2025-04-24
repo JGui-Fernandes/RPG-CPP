@@ -47,7 +47,7 @@ char* Cena::getDescricao(){
 }
 
 void Cena::imprimeDescricao(){
-    cout << descricao << "\n" << endl;
+    cout << "\n" <<descricao << "\n" << endl;
 }
 
 void Cena::imprimeOpcoes(){
