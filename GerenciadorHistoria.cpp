@@ -36,6 +36,7 @@ void GerenciadorHistoria::iniciarJogo(){
     bool resposta;
     p = p.constroiHeroi(&resposta);
     p.setProvisoes(5);
+    salvador.setPersonagem(&p);
 
     if(resposta){
         abrirCena("#1");
@@ -50,6 +51,9 @@ void GerenciadorHistoria::carregarJogo(){
 }
 
 void GerenciadorHistoria::abrirCena(char* arquivo){
+    salvador.adicionaCena(arquivo);
+    salvador.escreverSalvamento();
+
     char arquivoFinal[10];
     strcpy(arquivoFinal, arquivo);
     strcat(arquivoFinal, ".txt");

@@ -6,6 +6,7 @@
 #include "Cena.h"
 #include "CenaItem.h"
 #include "CenaMonstro.h"
+#include "SalvarHistoria.h"
 
 using namespace std;
 
@@ -50,4 +51,5 @@ class GerenciadorHistoria{
         CenaMonstro* cm;
         CenaItem* ci;
         Monstro m;
+        SalvarHistoria salvador;
 };

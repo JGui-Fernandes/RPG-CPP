@@ -58,6 +58,7 @@
 		<Unit filename="Monstro.h" />
 		<Unit filename="Personagem.cpp" />
 		<Unit filename="Personagem.h" />
+		<Unit filename="SalvarHistoria.cpp" />
 		<Unit filename="SalvarHistoria.h" />
 		<Unit filename="TipoItem.h" />
 		<Unit filename="main.cpp" />

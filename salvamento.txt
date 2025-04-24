@@ -1,0 +1,9 @@
+P: 	 	;10;16;10;5;4;0
+I: Arco e flecha;2;1;5;10
+I: espada;2;1;5;10
+I: Arco e flecha;2;1;5;10
+I: espada;2;1;5;10
+#1
+#5I
+#4I
+#2M
