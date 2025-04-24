@@ -42,6 +42,8 @@ class GerenciadorHistoria{
 
         void pegarObjeto(Item* item);
 
+        int abrirInventario();
+
     private:
         Personagem p;
         Cena* c;

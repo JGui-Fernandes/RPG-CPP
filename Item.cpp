@@ -82,16 +82,13 @@ void Item::imprimeResumo(){
 }
 
 void Item::imprimeDetalhe(){
-    cout << "Nome: " << nome << endl;
-    cout << "Tipo: " << getTipoEscrito() << endl;
+    cout << "Nome: " << nome << "  |  Tipo: " << getTipoEscrito();
     if(combate){
         if(tipo == 1){
-            cout << "Desvantagem de ataque do inimigo: " << fa << endl;
-            cout << "Bonus de defesa: " << dano << endl;
+            cout << "  |  Bonus de defesa: " << dano << endl;
         }
         if(tipo == 2){
-            cout << "Forca de ataque: " << fa << endl;
-            cout << "Bonus de ataque: " << dano << endl;
+            cout << "  |  Bonus de ataque: " << dano << endl;
         }
     }
 }

@@ -96,21 +96,16 @@ void Personagem::adicionaItem(Item* novoItem){
     }
 }
 
-void Personagem::descartarItem(Item novoItem) {
-    for (int i = 0; i < qtdeItens; i++) {
-        if (strcmp(itens[i]->getNome(), novoItem.getNome()) == 0) {
-            delete itens[i];
+void Personagem::descartarItem(int index) {
+    delete itens[index];
 
-            for (int j = i; j < qtdeItens - 1; j++) {
-                itens[j] = itens[j + 1];
-            }
-            itens[qtdeItens- 1] = nullptr;
-
-            qtdeItens--;
-
-            break;
-        }
+    for (int j = index; j < qtdeItens - 1; j++) {
+        itens[j] = itens[j + 1];
     }
+    itens[qtdeItens- 1] = nullptr;
+
+    qtdeItens--;
+
 }
 
 void Personagem::imprimeListaItens(){
