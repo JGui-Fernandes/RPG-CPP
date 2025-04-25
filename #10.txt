@@ -1,1 +1,3 @@
 GANHOU!
+#5: Continuar
+#14: Encerrar Jogo
