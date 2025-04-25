@@ -1,13 +1,11 @@
-SEGUNDO-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus, lorem a dignissim tristique, lorem magna vulputate sem, et tincidunt lectus nulla ut velit. Ut tempor quam tincidunt odio vehicula in mollis metus varius. Etiam dapibus, mi quis consequat ullamcorper, sem arcu aliquet tortor, id semper nulla turpis et quam. Praesent vitae felis mi, aliquet fringilla sapien. Praesent molestie vestibulum mattis. Integer a nisl lectus. Nulla ut urna lacus, vel fermentum metus. Aliquam eros quam, fringilla id
-N: Orc
-H: 12
-S: 10
-E: 12
-T: 1000
+Dentro da Caverna, os sons se multiplicam em todas as dire��es. Um morcego gigante desce do teto, atraido pelo seu facho de luz. Sua lanterna esta falhando, mas voce tem algumas armas na mao.
+N: Morcego
+H: 7
+S: 7
+E: 18
+T: 900
 P: 1
-I: chave;w;1;0;0
+I: arco e flechas;w;1;0;0
 10;11
 #1: Lutar
-#3: tres
-#4I: quatro item
-
+#9: Fugir

@@ -1,6 +1,4 @@
-TERCEIRO-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus, lorem a dignissim tristique, lorem magna vulputate sem, et tincidunt lectus nulla ut velit. Ut tempor quam tincidunt odio vehicula in mollis metus varius. Etiam dapibus, mi quis consequat ullamcorper, sem arcu aliquet tortor, id semper nulla turpis et quam. Praesent vitae felis mi, aliquet fringilla sapien. Praesent molestie vestibulum mattis. Integer a nisl lectus. Nulla ut urna lacus, vel fermentum metus. Aliquam eros quam, fringilla id
-
-#1: um
-#2M: dois monstro
-#4I: quatro item
-
+Voce escolhe a trilha de terra, afundando os pes no barro. Mais a frente, a trilha se divide: uma parte segue reta em meio a nevoa, a outra parece ter sido usada recentemente.
+#4M: Seguir pelo caminho da nevoa
+#3I: Continuar pela trilha principal
+#1: Voltar para o inicio

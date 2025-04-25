@@ -1,1 +1,3 @@
-GANHOUUUU
+Após uma batalha complexa, voce conseguiu derrotar seu adversario"
+#5: Continuar
+#14: Encerrar Jogo

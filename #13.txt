@@ -1,0 +1,4 @@
+Voce tentou fugir mas foi capturado, escolha um caminho para continuar sua jornada!
+#2: Seguir em frente
+#3: Dobrar a direita
+#14: Dobrar a esquerda

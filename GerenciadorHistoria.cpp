@@ -85,6 +85,10 @@ char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
     int escolha;
     cin >> escolha;
 
+    if(strcmp(ce->getOpcao(escolha-1), "Encerrar Jogo.")==0){
+        encerrador();
+    }
+
     switch(escolha){
         case -1:
             encerrador();

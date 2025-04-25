@@ -1,0 +1,3 @@
+Item Ignorado! Escolha uma direcao para seguir.
+#5: Direita
+#2M: Esquerda
