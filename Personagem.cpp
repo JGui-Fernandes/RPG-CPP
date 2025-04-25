@@ -23,6 +23,17 @@ Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int 
     provisoes = 0;
 }
 
+Personagem::Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, int novaProvisao, int novaQtdeItens, int novoTesouro){
+    nome = novoNome;
+    habilidade = novaHabilidade;
+    energia = novaEnergia;
+    sorte = novaSorte;
+    qtdeItens = novaQtdeItens;
+    tesouro = novoTesouro;
+    provisoes = novaProvisao;
+}
+
+
 char* Personagem::getNome() {
     return nome;
 }

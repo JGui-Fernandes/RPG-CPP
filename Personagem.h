@@ -13,6 +13,7 @@ class Personagem{
         Personagem();
         Personagem(bool*);
         Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte);
+        Personagem(char* novoNome, int novaHabilidade, int novaEnergia, int novaSorte, int novaProvisao, int novaQtdeItens, int novoTesouro);
 
         char* getNome();
         int getHabilidade();

@@ -26,9 +26,17 @@ class SalvarHistoria{
 
         void adicionaCena(char* nomeCena);
 
+        void lerArquivo();
+
+        char* converteStringParaChar(string texto);
+        int converteCharParaInt(char* texto);
+        int converteStringParaInt(string texto);
+        char* removeChar(char* texto, char* divisor);
+        char converteTipo(int antigo);
+
     private:
         Personagem* personagem;
-        char* cenas[10];
+        char* cenas[20];
         int qtdeCenas;
         char* arquivo;
 };

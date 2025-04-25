@@ -39,7 +39,7 @@ void CenaItem::imprimeCena(){
 
     item->imprimeDetalhe();
 
-    cout << "\n" << endl;
+    cout << "\n\n" << endl;
 
    imprimeOpcoes();
 }

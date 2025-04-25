@@ -47,7 +47,13 @@ void GerenciadorHistoria::iniciarJogo(){
 }
 
 void GerenciadorHistoria::carregarJogo(){
-    cout << "Ainda nao implementado" << endl;
+    salvador.lerArquivo();
+    Personagem* per = salvador.getPersonagem();
+
+    p = *per;
+
+    abrirCena(salvador.getCena(salvador.getQtdeCenas()-1));
+
 }
 
 void GerenciadorHistoria::abrirCena(char* arquivo){
@@ -72,13 +78,16 @@ void GerenciadorHistoria::abrirCena(char* arquivo){
 char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
     ce->imprimeDescricao();
     ce->imprimeOpcoes();
-    cout << "0) Acessar Inventario\n" << endl;
+    cout << "0) Acessar Inventario" << endl;
+    cout << "-1) Fechar o jogo\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
     int escolha;
     cin >> escolha;
 
     switch(escolha){
+        case -1:
+            encerrador();
         case 0:
             abrirInventario();
             lerRespostaERetornaCena(ce);
@@ -97,8 +106,10 @@ char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
 char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
     ce->imprimeDescricao();
     ce->getMonstro()->imprimeInfo();
+    cout << endl;
     ce->imprimeOpcoes();
-    cout << "0) Acessar Inventario\n" << endl;
+    cout << "0) Acessar Inventario" << endl;
+    cout << "-1) Fechar o jogo\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
     int escolha;
@@ -109,6 +120,8 @@ char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
         batalha(&p, ce->getMonstro());
     }
     switch(escolha){
+        case -1:
+            encerrador();
         case 0:
             abrirInventario();
             lerRespostaERetornaCenaMonstro(ce);
@@ -127,8 +140,10 @@ char* GerenciadorHistoria::lerRespostaERetornaCenaMonstro(CenaMonstro* ce){
 char* GerenciadorHistoria::lerRespostaERetornaCenaItem(CenaItem* ce){
     ce->imprimeDescricao();
     ce->getItem()->imprimeResumo();
+    cout << endl;
     ce->imprimeOpcoes();
-    cout << "0) Acessar Inventario\n" << endl;
+    cout << "0) Acessar Inventario" << endl;
+    cout << "-1) Fechar o jogo\n" << endl;
     cout << "Digite a opcao desejada:" << endl;
 
     int escolha;
@@ -140,6 +155,8 @@ char* GerenciadorHistoria::lerRespostaERetornaCenaItem(CenaItem* ce){
     }
 
     switch(escolha){
+        case -1:
+            encerrador();
         case 0:
             abrirInventario();
             lerRespostaERetornaCenaItem(ce);
@@ -155,8 +172,9 @@ char* GerenciadorHistoria::lerRespostaERetornaCenaItem(CenaItem* ce){
     }
 }
 
-void GerenciadorHistoria::encerrador(){
-    cout << "Obrigado por jogar!" << endl;
+void GerenciadorHistoria::encerrador() {
+    cout << "\nObrigado por jogar! Volte sempre!" << endl;
+    exit(0);
 }
 
 int GerenciadorHistoria::sortearValor(){
@@ -239,6 +257,7 @@ int GerenciadorHistoria::getDanoReduzido(Item* armaduras[10], int qtde){
     for(int i = 0; i < qtde; i++){
         dano += armaduras[i]->getDano();
     }
+    cout << "\n\nDANO REDUZIDO: " << dano << "\n\n" << endl;
     return dano;
 }
 
@@ -384,7 +403,7 @@ int GerenciadorHistoria::abrirInventario(){
             while(i < 0 || i > p.getQtdeItens()){
                 p.imprimeListaItens();
 
-                cout << "Digite o ID do item que deseja remover:\n" << endl;
+                cout << "Digite o ID do item que deseja detalhar:\n" << endl;
                 cin >> i;
                 if(i > 0 && i < p.getQtdeItens()){
                     break;
