@@ -1,4 +1,4 @@
-A neblina rasteja pelo chão e o som dos galhos estalando ao redor denuncia a presença de algo… ou alguém. Um lobisomem surge entre as árvores, olhos vermelhos e garras prontas. Você pode lutar ou tentar fugir.
+A neblina rasteja pelo chao e o som dos galhos estalando ao redor denuncia a presença de algo ou alguem. Um lobisomem surge entre as arvores, olhos vermelhos e garras prontas. Voce pode lutar ou tentar fugir.
 N: Lobisomen
 H: 8
 S: 12

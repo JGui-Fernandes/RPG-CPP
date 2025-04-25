@@ -1,4 +1,4 @@
-Você escolhe a trilha de terra, afundando os pes no barro. Mais à frente, a trilha se divide: uma parte segue reta em meio a nevoa, a outra parece ter sido usada recentemente.
-#9: Seguir pelo caminho da nevoa.
+Voce escolhe a trilha de terra, afundando os pes no barro. Mais a frente, a trilha se divide: uma parte segue reta em meio a nevoa, a outra parece ter sido usada recentemente.
+#4M: Seguir pelo caminho da nevoa.
 #3I: Continuar pela trilha principal.
-#2: Voltar para o inicio.
+#1: Voltar para o inicio.

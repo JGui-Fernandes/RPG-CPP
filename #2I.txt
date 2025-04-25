@@ -1,4 +1,4 @@
 Voce escolheu seguir pela antiga ponte de madeira suspensa sobre o rio e avista uma caverna. Ao chegar do outro lado da ponte voce encontra uma velha Lanterna de ferro. Pode ser util para iluminar lugares escondidos.
 I: lanterna;c;0;5;11
-#7: Pegar
-#8: Ignorar
+#8: Pegar
+#7: Ignorar

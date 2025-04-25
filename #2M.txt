@@ -1,4 +1,4 @@
-Dentro da Caverna, os sons se multiplicam em todas as direções. Um morcego gigante desce do teto, atraido pelo seu facho de luz. Sua lanterna esta falhando, mas você tem algumas armas na mao.
+Dentro da Caverna, os sons se multiplicam em todas as direções. Um morcego gigante desce do teto, atraido pelo seu facho de luz. Sua lanterna esta falhando, mas voce tem algumas armas na mao.
 N: Morcego
 H: 7
 S: 7

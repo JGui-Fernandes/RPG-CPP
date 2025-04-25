@@ -1,4 +1,4 @@
-Você adentra um templo em ruínas coberto por musgos e runas antigas. Três guardiões de pedra tomam vida. Você carrega uma espada e pode decidir entre lutar e fugir.
+Voce adentra um templo em ruinas coberto por musgos e runas antigas. Tres guardioes de pedra tomam vida. Voce pode decidir entre lutar ou fugir.
 N: Guardioes
 H: 6
 S: 10

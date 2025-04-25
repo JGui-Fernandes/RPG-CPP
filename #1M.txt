@@ -1,4 +1,4 @@
-Voce pegou a espada dela começaram a sair luzes. Até que o esqueleto que estava na torre ganha vida e se prepara para o ataque.
+Voce pegou a espada dela começaram a sair luzes. Ate que o esqueleto que estava na torre ganha vida e se prepara para o ataque.
 N: Esqueleto
 H: 6
 S: 8

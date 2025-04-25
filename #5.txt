@@ -1,4 +1,4 @@
-Você segue em frente, mantendo o foco no caminho. Escolha uma direcao para seguir
+Voce segue em frente, mantendo o foco no caminho. Escolha uma direcao para seguir
 #3I: Seguir em frente
 #3M: Dobrar a esquerda
 #6I: Pular

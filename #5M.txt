@@ -1,4 +1,4 @@
-Você caminha pela beira do rio coberto de névoa. A água escura se move devagar. De repente, uma criatura enorme surge do rio, com algas pendendo do corpo e olhos brilhantes. Ela avança em sua direção.
+Voce caminha pela beira do rio coberto de nevoa. A agua escura se move devagar. De repente, uma criatura enorme surge do rio, com algas pendendo do corpo e olhos brilhantes. Ela avanca em sua direcao.
 N: Monstro do Rio
 H: 7
 S: 9

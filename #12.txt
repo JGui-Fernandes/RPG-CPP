@@ -1,3 +1,4 @@
 Item Recolhido! Escolha uma direcao para seguir.
-#4M: Direita
-#9: Esquerda
+#5M: Direita
+#5: Esquerda
+
