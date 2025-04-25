@@ -1,0 +1,11 @@
+Você adentra um templo em ruínas coberto por musgos e runas antigas. Três guardiões de pedra tomam vida. Você carrega uma espada e pode decidir entre lutar e fugir.
+N: Guardioes
+H: 6
+S: 10
+E: 22
+T: 1500
+P: 3
+I: espada;w;1;0;0
+10;11
+#1: Lutar
+#13: Fugir

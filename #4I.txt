@@ -1,0 +1,4 @@
+No meio de alguns arbustos, você encontra uma Adaga prateada. Ela é pequena, leve e muito afiada — perfeita para quem gosta de se mover rápido e atacar de surpresa.
+I: adaga;W;1;10;7
+#7: Pegar
+#8: Ignorar

@@ -1,10 +1,4 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus, lorem a dignissim
-tristique, lorem magna vulputate sem, et tincidunt lectus nulla ut velit. Ut tempor quam tincidunt odio
-vehicula in mollis metus varius. Etiam dapibus, mi quis consequat ullamcorper, sem arcu aliquet tortor,
-id semper nulla turpis et quam. Praesent vitae felis mi, aliquet fringilla sapien. Praesent molestie
-vestibulum mattis. Integer a nisl lectus. Nulla ut urna lacus, vel fermentum metus. Aliquam eros quam,
-fringilla id
-
-#2: Lorem ipsum dolor
-#3: Praesent molestie
-#4: Integer a nisl lectus
+Voce acorda entre folhas molhadas, com trovoes ao longe. A floresta esta escura e o ceu cheio de nuvens. Voce nao sabe como chegou ali, mas sente que precisa seguir em frente. Tres caminhos se revelam: um trilho de pedras, uma trilha de terra afundada e um rio que corre suavemente para o sul.
+#2: Seguir pelo trilho de pedras.
+#3: Caminhar pela trilha de terra.
+#4: Acompanhar o rio.

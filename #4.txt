@@ -1,0 +1,4 @@
+Voce decide seguir o curso do rio. Mais a frente, voce encontra uma velha ponte de cordas balancando sobre um desfiladeiro. Do outro lado, uma caverna pode ser vista na encosta da montanha.
+#2I: Atravessar a ponte.
+#5M: Seguir pelo curso do rio.
+#2: Voltar para o inicio.

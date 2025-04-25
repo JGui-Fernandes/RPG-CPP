@@ -1,0 +1,6 @@
+Voce continua sua jornada e encontra uma Armadura de Ferro jogada em um velho suporte. Ela parece pesada, mas muito resistente. Pode proteger bem, mas pode te deixar mais lento.
+I: armadura;R;1;9;14
+#7: Pegar
+#8: Ignorar
+
+

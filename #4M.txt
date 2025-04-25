@@ -1,0 +1,11 @@
+A neblina rasteja pelo chão e o som dos galhos estalando ao redor denuncia a presença de algo… ou alguém. Um lobisomem surge entre as árvores, olhos vermelhos e garras prontas. Você pode lutar ou tentar fugir.
+N: Lobisomen
+H: 8
+S: 12
+E: 16
+T: 1000
+P: 1
+I: adaga;w;1;0;0
+10;11
+#1: Lutar
+#13: Fugir

@@ -32,6 +32,24 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="#10.txt" />
+		<Unit filename="#10I.txt" />
+		<Unit filename="#1I.txt" />
+		<Unit filename="#1M.txt" />
+		<Unit filename="#2I.txt" />
+		<Unit filename="#2M.txt" />
+		<Unit filename="#3I.txt" />
+		<Unit filename="#3M.txt" />
+		<Unit filename="#4.txt" />
+		<Unit filename="#4I.txt" />
+		<Unit filename="#4M.txt" />
+		<Unit filename="#5.txt" />
+		<Unit filename="#5I.txt" />
+		<Unit filename="#5M.txt" />
+		<Unit filename="#6I.txt" />
+		<Unit filename="#7I.txt" />
+		<Unit filename="#8I.txt" />
+		<Unit filename="#9I.txt" />
 		<Unit filename="Cena.cpp" />
 		<Unit filename="Cena.h" />
 		<Unit filename="CenaItem.cpp" />

@@ -1,0 +1,11 @@
+Dentro da Caverna, os sons se multiplicam em todas as direções. Um morcego gigante desce do teto, atraido pelo seu facho de luz. Sua lanterna esta falhando, mas você tem algumas armas na mao.
+N: Morcego
+H: 7
+S: 7
+E: 18
+T: 900
+P: 1
+I: arco e flechas;w;1;0;0
+10;11
+#1: Lutar
+#9: Fugir
