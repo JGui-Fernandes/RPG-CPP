@@ -1,4 +1,4 @@
 Voce segue pelo trilho de pedras. Logo, o caminho se estreita entre duas grandes rochas. E mais a frente pode-se ver uma torre de pedra antiga.
-#1I: Subir ate a torre para investigar o que sobrou dela.
-#4I: Seguir pelo trilho de pedras.
-#1: Voltar para o inicio.
+#1I: Subir ate a torre para investigar o que sobrou dela
+#4I: Seguir pelo trilho de pedras
+#1: Voltar para o inicio

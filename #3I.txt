@@ -1,4 +1,4 @@
 Voce continuou seu trajeto pela floresta e encostado no tronco de uma arvore, ha um Arco com um pequeno estojo de flechas. E logo a frente voce consegue ver uma caverna escura.
-I: arco e flecha;W;0;20;14
+I: arco e flecha;w;0;20;14
 #12: Pegar
 #8: Ignorar

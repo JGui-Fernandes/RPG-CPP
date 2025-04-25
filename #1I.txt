@@ -1,4 +1,4 @@
 Voce entra na torre encontra uma Espada caida ao lado de um esqueleto antigo.
-I: espada;W;1;15;9
+I: espada;w;1;15;9
 #7: Pegar
 #8: Ignorar
