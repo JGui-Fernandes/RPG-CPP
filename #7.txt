@@ -1,3 +1,4 @@
-Item Recolhido! Escolha uma direcao para seguir.
-#4M: Direita
-#9: Esquerda
+Voce tropeca em uma armadilha de cordas e fica pendurado de cabeca para baixo. Um gnomo surge, rindo.
+#3: Pedir ajuda
+#5: Tentar se soltar
+#9I: Oferecer moeda de ouro

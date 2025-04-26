@@ -1,3 +1,4 @@
-Item Recolhido! Escolha uma direcao para seguir.
-#5M: Direita
-#5: Esquerda
+Voce toca a agua com o medalhao e um portal azul se abre.
+#13I: Atravessar
+#5: Desistir
+#9I: Esperar

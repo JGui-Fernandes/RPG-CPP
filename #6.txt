@@ -1,3 +1,4 @@
-Voce chegou na caverna.
-#2M: Entrar na caverna
-#5: Nao entrar na caverna
+Apos uma longa e dura batalha, voce leva o golpe fatal e cai desacordado. Sem a nocao do tempo corrido, voce acorda em uma cabana desconhecida, sem saber como chegou ao local. Olhando em volta, voce avista um escudo de madeira. Apesar de antigo, esta bem conservado.
+I: escudo de madeira;r;1;8;3
+#: Pegar
+#: Ignorar

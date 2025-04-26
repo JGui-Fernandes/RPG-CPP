@@ -1,0 +1,4 @@
+Voce encontra um amuleto.
+I: amuleto de protecao;c;0;0;0
+#2M: Pegar
+#3: Ignorar

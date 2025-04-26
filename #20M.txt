@@ -1,0 +1,11 @@
+Voce volta ate a ponte de pedra. O Cavaleiro das Sombras aguarda. Com a Espada das Chamas e o Medalhao, voce se prepara.
+N: Cavaleiro das Sombras
+H: 8
+S: 6
+E: 12
+T: 500
+P: 1
+I: escudo;r;0;0;0
+FIM;DERROTA
+#1: Lutar
+#5: Fugir

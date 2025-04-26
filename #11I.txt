@@ -1,0 +1,5 @@
+Voce pega o Medalhao Antigo que brilhava no chao, e o ambiente parece reagir.
+I: medalhao antigo;c;0;0;0
+#5: Guardar
+#9I: Jogar fora
+#12: Tentar usar

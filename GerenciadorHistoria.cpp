@@ -334,7 +334,7 @@ void GerenciadorHistoria::atacar(Item* arma, int faDefesa, Personagem* ataque, P
     int dano = arma->getDano();
 
     cout << "\nValor do dado: " << valorDado << "\n" << endl;
-    int golpe = valorDado + ataque->getHabilidade();
+    int golpe = valorDado + ataque->getSorte();
     if(golpe >= faDefesa){
         cout << "Acertou o golpe!\n" << endl;
         cout << "Dano total: " << dano << "\n" << endl;
@@ -347,14 +347,14 @@ void GerenciadorHistoria::atacar(Item* arma, int faDefesa, Personagem* ataque, P
 
 void GerenciadorHistoria::sofrerAtaque(int faDefesa, Personagem* ataque, Personagem* defesa, Item* armaduras[10], int qtdeArmadura){
     int valorDado = sortearValor();
-    int dano = 6 - getDanoReduzido(armaduras, qtdeArmadura);
+    int dano = ataque->getHabilidade() - getDanoReduzido(armaduras, qtdeArmadura);
 
     if(dano < 0){
         dano = 0;
     }
 
     cout << "\nValor do dado: " << valorDado << "\n" << endl;
-    int golpe = valorDado + ataque->getHabilidade();
+    int golpe = valorDado + ataque->getSorte();
     if(golpe >= faDefesa){
         cout << "Acertou o golpe!\n" << endl;
         cout << "Dano total: " << dano << "\n" << endl;

@@ -1,0 +1,12 @@
+Voce empunha a espada e um golem se forma das paredes.
+N: Golem Ancestral
+H: 7
+S: 5
+E: 14
+T: 300
+P: 2
+I: pedra magica;c;0;0;0
+15;16
+#15: Lutar
+#16: Fugir
+#5: Usar medalhao

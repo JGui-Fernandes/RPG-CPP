@@ -1,4 +1,4 @@
-Voce segue em frente, mantendo o foco no caminho. Escolha uma direcao para seguir
-#3I: Seguir em frente
-#3M: Dobrar a esquerda
-#6I: Pular
+Voce encontra uma arvore enorme com simbolos antigos gravados no tronco. Um eco distante sussurra seu nome.
+#6M: Encostar na arvore.
+#3: Ignorar e seguir.
+#7: Tentar decifrar os simbolos.

@@ -1,11 +1,11 @@
-Voce adentra um templo em ruinas coberto por musgos e runas antigas. Tres guardioes de pedra tomam vida. Voce pode decidir entre lutar ou fugir.
-N: Guardioes
-H: 6
-S: 10
-E: 22
-T: 1500
-P: 3
-I: espada;w;1;0;0
-10;11
+Apos empunhar o arco, uma energia corre pelo seu corpo. Apos alguns minutos de caminhada, um barulho vindos das arvores chama sua atencao. Ao se virar em direcao ao barulho, voce nota olhos vermelhos brilhantes encarando voce. Voce se move lentamente para pegar seu arco e, repentinamente, a criatura pula dos galhos, aprensetando suas garras e presas.
+N: Lobisomen
+H: 8
+S: 9
+E: 16
+T: 1000
+P: 1
+I: adaga;w;1;0;0
+5;x
 #1: Lutar
-#13: Fugir
+#5M: Fugir

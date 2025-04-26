@@ -1,0 +1,12 @@
+Ao dar meia-volta, voce e cercado por lobos famintos.
+N: Matilha de Lobos
+H: 5
+S: 3
+E: 10
+T: 20
+P: 0
+I: carne;c;0;0;0
+6M;9I
+#6M: Lutar
+#9I: Jogar comida
+#10M: Subir na arvore

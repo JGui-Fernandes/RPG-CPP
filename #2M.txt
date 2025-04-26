@@ -1,11 +1,11 @@
-Dentro da Caverna, os sons se multiplicam em todas as dire��es. Um morcego gigante desce do teto, atraido pelo seu facho de luz. Sua lanterna esta falhando, mas voce tem algumas armas na mao.
-N: Morcego
-H: 7
-S: 7
-E: 18
-T: 900
-P: 1
-I: arco e flechas;w;1;0;0
-10;11
-#1: Lutar
-#9: Fugir
+Ao retirar a espada da pedra, as aguas do riacho comecam a se movimentar abruptamente. Apos alguns segundos, uma figura encapuzada sai das margens e revelando seus olhos brilhantes e pele esverdeada.
+N: Andarilho das Aguas
+H: 6
+S: 9
+E: 8
+T: 50
+P: 0
+I: cajado;c;0;0;0
+5;x
+#5: Lutar
+#5M: Fugir

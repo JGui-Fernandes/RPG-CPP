@@ -1,0 +1,12 @@
+Voce chega a uma ponte de pedra sobre um abismo. Um cavaleiro em armadura negra bloqueia a passagem.
+N: Cavaleiro das Sombras
+H: 8
+S: 6
+E: 12
+T: 500
+P: 1
+I: escudo;r;0;0;0
+3;9I
+#3: Lutar
+#5: Subornar
+#9I: Procurar outro caminho

@@ -1,4 +1,4 @@
-No meio de alguns arbustos, voce encontra uma Adaga prateada. Ela eh pequena, leve e muito afiada, perfeita para quem gosta de se mover rapido e atacar de surpresa.
-I: adaga;w;1;10;7
-#7: Pegar
-#8: Ignorar
+As luzes na trilha direita eram vagalumes, e elas guiam voce ate uma antiga estatua. Esta estatua homenageia um lendario guerreiro. Aos pes da estatua, se encontra uma lanca de madeira.
+I: lanca;w;1;9;9
+#4M: Pegar.
+#5: Ignorar.
