@@ -1,4 +1,4 @@
-Voce encontra uma arvore enorme com simbolos antigos gravados no tronco. Um eco distante sussurra seu nome.
-#6M: Encostar na arvore.
-#3: Ignorar e seguir.
-#7: Tentar decifrar os simbolos.
+Seguindo caminho, voce encontra uma arvore enorme com simbolos antigos gravados no tronco. Um eco distante sussurra seu nome.
+#8M: Encostar na arvore.
+#10: Ignorar e seguir.
+#9I: Tentar decifrar os simbolos.

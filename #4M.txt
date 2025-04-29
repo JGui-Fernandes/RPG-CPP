@@ -6,6 +6,6 @@ E: 24
 T: 1000
 P: 1
 I: adaga;w;1;0;0
-5;
+5;6
 #1: Lutar
 #5M: Fugir

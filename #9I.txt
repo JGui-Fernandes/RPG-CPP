@@ -1,4 +1,4 @@
-Voce encontra um amuleto.
-I: amuleto de protecao;c;0;0;0
-#2M: Pegar
-#3: Ignorar
+Apos analisar as raizes da arvore, voce encontra um capacete de metal enterrado abaixo do tronco.
+I: capacete de metal;w;1;5;4
+#10: Pegar
+#10: Ignorar

@@ -1,4 +1,2 @@
-Voce tropeca em uma armadilha de cordas e fica pendurado de cabeca para baixo. Um gnomo surge, rindo.
-#3: Pedir ajuda
-#5: Tentar se soltar
-#9I: Oferecer moeda de ouro
+Depois do repouso voce se sente com as energias renovadas e pronto para continuar a aventura. Saindo da cabana, voce percebe que ainda esta na mesma floresta de antes. 
+#5: Seguir jornada

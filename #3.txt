@@ -1,4 +1,0 @@
-A trilha escura leva ate uma cabana abandonada. Uma placa enferrujada diz "Aqui repousa quem perdeu a coragem."
-#5: Entrar na cabana.
-#8M: Dar meia-volta.
-#9I: Vasculhar a area ao redor da cabana.
