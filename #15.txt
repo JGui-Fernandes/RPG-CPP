@@ -1,4 +1,3 @@
-Voce enfrenta o golem com a Espada das Chamas e o vence. Uma porta se abre.
-#17: Entrar
-#9I: Voltar
-#16: Descansar
+Saindo da caverna e seguindo pela estrada, voce observa que a estrada atravessa por uma pequena vila.
+#16: Seguir o caminho e atravessar o centro da vila
+#18: Contornar a vila, passando pela floresta

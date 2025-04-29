@@ -1,5 +1,0 @@
-Dentro do portal, voce encontra uma espada cravada em um pedestal.
-I: espada das chamas;w;1;15;9
-#14M: Pegar
-#9I: Ignorar
-#5: Destruir pedestal

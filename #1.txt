@@ -1,4 +1,4 @@
 Voce acorda em uma clareira, cercado por arvores altas e sons de criaturas desconhecidas. O ar esta umido e uma nevoeiro cobre o chao. Ha tres caminhos diante de voce.
-#2I: Seguir pela trilha a esquerda, onde ouve o som de agua corrente.
-#3I: Caminhar pela trilha central, mais escura e silenciosa.
-#4I: Escolher a trilha da direita, onde luzes dancam entre as arvores.
+#2I: Seguir pela trilha a esquerda, onde ouve o som de agua corrente
+#3I: Caminhar pela trilha central, mais escura e silenciosa
+#4I: Escolher a trilha da direita, onde luzes dancam entre as arvores

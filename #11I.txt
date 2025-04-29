@@ -1,5 +1,3 @@
-Voce pega o Medalhao Antigo que brilhava no chao, e o ambiente parece reagir.
-I: medalhao antigo;c;0;0;0
-#5: Guardar
-#9I: Jogar fora
-#12: Tentar usar
+Adentrando na caverna, o volume da melodia aumenta a cada passo que voce da. O caminho o conduz ate o final da caverna. La, voce se depara com uma forte luz erradiada por um objeto sobre uma pedra. Ao se aproximar, encontra-se um amuleto de outro com uma grande pedra vermelha no centro.
+#12M: Pegar
+#TRANQUILO: Se afastar e sair da caverna

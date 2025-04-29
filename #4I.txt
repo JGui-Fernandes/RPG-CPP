@@ -1,4 +1,4 @@
 As luzes na trilha direita eram vagalumes, e elas guiam voce ate uma antiga estatua. Esta estatua homenageia um lendario guerreiro. Aos pes da estatua, se encontra uma lanca de madeira.
 I: lanca;w;1;9;9
-#4M: Pegar.
-#5: Ignorar.
+#4M: Pegar
+#5: Ignorar
