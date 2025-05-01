@@ -1,4 +1,4 @@
-Voce tenta fugir, mas o golem bloqueia a passagem. Nao ha escolha a nao ser lutar.
-#15: Lutar
-#5: Usar Espada
-#14M: Derrubar o teto
+Adentrando a vila, voce nota que, apesar de nao ser um grande centro, a cidade possui diversas opcoes de comercio, como tabernas, hotelarias, entre outras lojas. 
+#: Procurar uma hotelaria para passar a noite.
+#: Procurar uma taberna para fazer uma refeicao.
+#: Seguir jornada.
