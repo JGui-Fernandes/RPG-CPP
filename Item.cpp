@@ -120,43 +120,13 @@ void Item::constroiItem(string texto){
     }
 
 
-    char* nomeFinal = removeChar(converteStringParaChar(nome), "I: ");
-    char* tipoFinal = converteStringParaChar(tipo);
-    int combateFinal = converteStringParaInt(combate), faFinal = converteStringParaInt(fa), danoFinal = converteStringParaInt(dano);
+    char* nomeFinal = util.removeChar(util.converteStringParaChar(nome), "I: ");
+    char* tipoFinal = util.converteStringParaChar(tipo);
+    int combateFinal = util.converteStringParaInt(combate), faFinal = util.converteStringParaInt(fa), danoFinal = util.converteStringParaInt(dano);
 
     setNome(nomeFinal);
     setCombate(combateFinal);
     setDano(danoFinal);
     setFA(faFinal);
     setTipo(tipoFinal);
-}
-
-char* Item::converteStringParaChar(string texto){
-        char* resultado = (char*)malloc(texto.length() + 1);
-        strcpy(resultado, texto.c_str());
-}
-
-
- int Item::converteCharParaInt(char* texto){
-    char* i = texto;
-    int o = atoi(i);
-
-    return o;
- }
-
- int Item::converteStringParaInt(string texto){
-    char* i = converteStringParaChar(texto);
-    int o = converteCharParaInt(i);
-
-    return o;
- }
-
- char* Item::removeChar(char* texto, char* divisor) {
-    char* pos = strstr(texto, divisor);
-
-    if (pos != nullptr) {
-        char* resultado = pos + strlen(divisor);
-        return resultado;
-    }
-    return texto;
 }

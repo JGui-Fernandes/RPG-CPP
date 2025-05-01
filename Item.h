@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "TipoItem.h"
+#include "Util.h"
 
 using namespace std;
 
@@ -34,11 +35,6 @@ class Item{
 
         void constroiItem(string texto);
 
-        char* converteStringParaChar(string texto);
-        int converteCharParaInt(char* texto);
-        int converteStringParaInt(string texto);
-        char* removeChar(char* texto, char* divisor);
-
     private:
 
         char* nome;
@@ -46,4 +42,5 @@ class Item{
         bool combate;
         int fa;
         int dano;
+        Util util;
 };

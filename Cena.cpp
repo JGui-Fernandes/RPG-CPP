@@ -130,7 +130,7 @@ void Cena::lerDescricao(char* nomeArquivo) {
 
     getline(entrada, linha);
 
-    char* resultado = converteStringParaChar(linha);
+    char* resultado = util.converteStringParaChar(linha);
 
     descricao = resultado;
 
@@ -166,36 +166,6 @@ void Cena::lerOpcoes(char* nomeArquivo) {
 
     entrada.close();
 }
-
-char* Cena::removeChar(char* texto, char* divisor) {
-    char* pos = strstr(texto, divisor);
-
-    if (pos != nullptr) {
-        char* resultado = pos + strlen(divisor);
-        return resultado;
-    }
-    return texto;
-}
-
-char* Cena::converteStringParaChar(string texto){
-        char* resultado = (char*)malloc(texto.length() + 1);
-        strcpy(resultado, texto.c_str());
-}
-
-
- int Cena::converteCharParaInt(char* texto){
-    char* i = texto;
-    int o = atoi(i);
-
-    return o;
- }
-
- int Cena::converteStringParaInt(string texto){
-    char* i = converteStringParaChar(texto);
-    int o = converteCharParaInt(i);
-
-    return o;
- }
 
  void Cena::imprimeCena(){
     imprimeDescricao();

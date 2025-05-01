@@ -112,10 +112,10 @@ void SalvarHistoria::lerArquivo(){
     }
 
 
-    char* nomeFinal = removeChar(converteStringParaChar(nome), "P: ");
-    int habilidadeFinal = converteStringParaInt(habilidade), energiaFinal = converteStringParaInt(energia),
-        sorteFinal = converteStringParaInt(sorte), provisaoFinal = converteStringParaInt(provisao),
-        qtdeFinal = converteStringParaInt(qtdeItem), tesouroFinal = converteStringParaInt(tesouro);
+    char* nomeFinal = util.removeChar(util.converteStringParaChar(nome), "P: ");
+    int habilidadeFinal = util.converteStringParaInt(habilidade), energiaFinal = util.converteStringParaInt(energia),
+        sorteFinal = util.converteStringParaInt(sorte), provisaoFinal = util.converteStringParaInt(provisao),
+        qtdeFinal = util.converteStringParaInt(qtdeItem), tesouroFinal = util.converteStringParaInt(tesouro);
 
     personagem = new Personagem(nomeFinal, habilidadeFinal, energiaFinal, sorteFinal, provisaoFinal, qtdeFinal, tesouroFinal);
 
@@ -132,39 +132,8 @@ void SalvarHistoria::lerArquivo(){
     personagem->setItens(itens);
 
     while(getline(arq, linha)){
-        adicionaCena(converteStringParaChar(linha));
+        adicionaCena(util.converteStringParaChar(linha));
     }
-}
-
-
-char* SalvarHistoria::converteStringParaChar(string texto){
-    char* resultado = (char*)malloc(texto.length() + 1);
-    strcpy(resultado, texto.c_str());
-}
-
-
-int SalvarHistoria::converteCharParaInt(char* texto){
-    char* i = texto;
-    int o = atoi(i);
-
-    return o;
-}
-
-int SalvarHistoria::converteStringParaInt(string texto){
-    char* i = converteStringParaChar(texto);
-    int o = converteCharParaInt(i);
-
-    return o;
- }
-
-char* SalvarHistoria::removeChar(char* texto, char* divisor) {
-    char* pos = strstr(texto, divisor);
-
-    if (pos != nullptr) {
-        char* resultado = pos + strlen(divisor);
-        return resultado;
-    }
-    return texto;
 }
 
 char SalvarHistoria::converteTipo(int antigo){
