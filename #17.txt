@@ -1,4 +1,0 @@
-Voce atravessa a passagem e encontra inscricoes antigas. Uma voz chama voce.
-#18I: Seguir a voz
-#19: Procurar saida
-#9I: Destruir inscricoes
