@@ -2,7 +2,7 @@ Voce se aproxima da arvore e encosta encosta a palma da sua mao em um dos galhos
 N: Espirito da floresta
 H: 4
 S: 1
-E: 20
+E: 15
 T: 0
 P: 0
 I: madeira;c;0;0;0

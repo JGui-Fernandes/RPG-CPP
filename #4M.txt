@@ -2,7 +2,7 @@ Voce empunha a lanca e consegue sentir seu poder de destruicao. Ao se afastar da
 N: Guerreiro estatua
 H: 8
 S: 9
-E: 24
+E: 15
 T: 1000
 P: 1
 I: adaga;w;1;0;0

@@ -1,8 +1,8 @@
-Voce agarra o amuleto e sai correndo para a saida da caverna. Mas, das sombras nas paredes, o cavaleiro surge diante dos seus olhos. Um sorriso sarcastico e uma voz confiante diz: "Voce realmente achou que podia fugir de uma sombra?"
+Voce agarra o amuleto e sai correndo para a saida da caverna. Mas, das sombras nas paredes, o cavaleiro surge diante dos seus olhos. Um sorriso sarcastico e uma voz confiante diz "Voce realmente achou que podia fugir de uma sombra?"
 N: Cavaleiro Sombrio
-H: 12
+H: 10
 S: 6
-E: 15
+E: 20
 T: 500
 P: 1
 I: escudo;r;0;0;0

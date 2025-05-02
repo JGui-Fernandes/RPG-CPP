@@ -1,8 +1,8 @@
-O ar ao seu redor começa a vibrar, e você sente uma energia potente. Sem aviso, as runas começam a brilhar intensamente, e um portal começa a se formar à sua frente. Você hesita, mas sabe que não há retorno. Avançando, você entra no portal e, em um instante, a paisagem ao seu redor se distorce. Quando a visão se clareia novamente, você se encontra em uma enorme sala de pedra, diante de uma figura imponente. Voce esta diante do Mestre das Sombras, sua presenca faz seu corpo estremecer, voce nunca esteve tao perto de algo tao poderoso e assustador. Agora voce tem apenas duas opcoes, enfrentar o Mestre das Sombras e tentar se tornar o heroi, ou se aliar a ele e mergulhar no poder das trevas.
+O ar ao seu redor comeca a vibrar, e voce sente uma energia potente. Sem aviso, as runas comecam a brilhar intensamente, e um portal comeca a se formar a sua frente. Voce hesita, mas sabe que nao ha retorno. Avancando, voce entra no portal e, em um instante, a paisagem ao seu redor se distorce. Quando a visao se clareia novamente, voce se encontra em uma enorme sala de pedra, diante de uma figura imponente. Voce esta diante do Mestre das Sombras, sua presenca faz seu corpo estremecer, voce nunca esteve tao perto de algo tao poderoso e assustador. Agora voce tem apenas duas opcoes, enfrentar o Mestre das Sombras e tentar se tornar o heroi, ou se aliar a ele e mergulhar no poder das trevas.
 N: Mestre das Sombras
-H: 12
-S: 6
-E: 15
+H: 22
+S: 12
+E: 30
 T: 500
 P: 1
 I: escudo;r;0;0;0

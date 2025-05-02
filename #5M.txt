@@ -2,7 +2,7 @@ Ao correr para longe, voce adentra cada vez mais na floresta. Quando se da por c
 N: Monstro de lama
 H: 8
 S: 7
-E: 14
+E: 18
 T: 150
 P: 2
 I: anel;c;0;0;0

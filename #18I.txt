@@ -1,5 +1,0 @@
-Na sala circular, um espirito aparece diante de voce e deixa um pergaminho flutuando.
-I: pergaminho antigo;c;0;0;0
-#19: Ouvir
-#20M: Atacar
-#9I: Exigir saida

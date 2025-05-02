@@ -1,4 +1,4 @@
 Apos analisar as raizes da arvore, voce encontra um capacete de metal enterrado abaixo do tronco.
-I: capacete de metal;w;1;5;4
+I: capacete de metal;r;1;5;3
 #10: Pegar
 #10: Ignorar

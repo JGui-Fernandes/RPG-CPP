@@ -2,7 +2,7 @@ Voce tenta fugir novamente, mas desta vez algo o impede. Ao correr, voce sente s
 N: Monstro de lama
 H: 8
 S: 10
-E: 14
+E: 18
 T: 150
 P: 2
 I: anel;c;0;0;0

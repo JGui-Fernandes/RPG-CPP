@@ -2,7 +2,7 @@ Apos empunhar o arco, uma energia corre pelo seu corpo. Apos alguns minutos de c
 N: Lobisomen
 H: 8
 S: 9
-E: 16
+E: 15
 T: 1000
 P: 1
 I: adaga;w;1;0;0

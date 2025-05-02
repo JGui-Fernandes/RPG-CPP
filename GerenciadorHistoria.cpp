@@ -249,7 +249,7 @@ void GerenciadorHistoria::batalha(Personagem* p, Monstro* m){
 
     p->setEnergia(p->getEnergia()+5);
     p->setProvisoes(5);
-    if(m->getEnergia() < 0){
+    if(m->getEnergia() < 1){
         cout << "\nVoce venceu!\n" << endl;
         abrirCena(m->getVitoria());
     }
