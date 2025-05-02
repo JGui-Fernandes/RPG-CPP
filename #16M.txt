@@ -1,6 +1,6 @@
 Voce segue seu caminho pela estrada, se afastando das construcoes e adentrando uma clareira sombria. A sua frente, uma bruxa encapuzada ergue seu cajado, os olhos brilhando com magia negra. Um sorriso cruel se forma em seus labios, enquanto ela prepara um feitico sombrio para lanca-lo contra voce.
 N: Bruxa Sombria  
-H: 18
+H: 10
 S: 9  
 E: 20 
 T: 45  
