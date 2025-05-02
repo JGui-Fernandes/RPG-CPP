@@ -290,7 +290,7 @@ Item* GerenciadorHistoria::escolherAcaoBatalha(Personagem* p, Item* armas[10], I
                 }
         }
 
-        else if(*qtdeArmas > 0){
+        else if(resposta < *qtdeArmas+2){
             return armas[resposta-2];
         }
         else{
