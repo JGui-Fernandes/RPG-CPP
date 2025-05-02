@@ -6,6 +6,6 @@ E: 8
 T: 50
 P: 0
 I: cajado;c;0;0;0
-5;6
+5;6I
 #5: Lutar
 #5M: Fugir

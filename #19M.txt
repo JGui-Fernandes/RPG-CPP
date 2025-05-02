@@ -1,3 +1,11 @@
 Ao se aproximar do ogro em silencio, ele se move de fora rápida e consegue te agarrar pelas pernas. Com voce entre os dedos, ele esboca um sorriso e diz "Acho que voce tem algo que pertence ao mestre", olhando diretamente para o amuleto brilhante em seu peito. Apos muito esforco, voce escapar das maos do ogro.
-#: Lutar
-#: Fugir e se esconder
+N: Ogro
+H: 12
+S: 6
+E: 15
+T: 500
+P: 1
+I: escudo;r;0;0;0
+16I;DERROTA
+#1: Lutar
+#16I: Fugir e se esconder

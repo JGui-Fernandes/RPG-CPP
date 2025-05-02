@@ -6,6 +6,6 @@ E: 15
 T: 500
 P: 1
 I: escudo;r;0;0;0
-14;DERROTA
+14I;DERROTA
 #3: Lutar
 #13M: Fugir

@@ -6,6 +6,6 @@ E: 20
 T: 0
 P: 0
 I: madeira;c;0;0;0
-9I;x
+9I;9
 #6M: Lutar
 #9I: Fugir
