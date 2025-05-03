@@ -2,7 +2,7 @@ O ar ao seu redor comeca a vibrar, e voce sente uma energia potente. Sem aviso, 
 N: Mestre das Sombras
 H: 12
 S: 12
-E: 30
+E: 50
 T: 500
 P: 1
 I: escudo;r;0;0;0
