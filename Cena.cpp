@@ -26,7 +26,6 @@ Cena::Cena(char* nomeArquivo, bool arquivo){
 
 Cena::Cena(char* novaDescricao){
     descricao = novaDescricao;
-    strcpy(descricao, novaDescricao);
     for(int i = 0; i < 3; i++){
         opcoes[i] = nullptr;
     }
