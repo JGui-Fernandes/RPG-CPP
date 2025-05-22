@@ -1,0 +1,11 @@
+Voce se aproxima da arvore e encosta encosta a palma da sua mao em um dos galhos. Ao fazer isso, consegue sentir uma energia e poder emanando da planta. Instantes apos, seu pulso eh agarrado pelo galho. E esta arvore comeca e se mexer e erguer suas raizes.
+N: Espirito da floresta
+H: 4
+S: 1
+E: 15
+T: 0
+P: 0
+I: madeira;c;0;0;0
+9I;9
+#6M: Lutar
+#9I: Fugir

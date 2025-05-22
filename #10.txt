@@ -1,3 +1,3 @@
-Após uma batalha complexa, voce conseguiu derrotar seu adversario"
-#5: Continuar
-#14: Encerrar Jogo
+Seguindo a jornada, voce ouve um som agradavel o chamando. Conforme vai se aproximando, percebe que se trata de uma melodia, e voce esta cada vez mais hipnotizado. A musica o leva ate a entrada de uma caverna escura, com um caminho pouco iluminado por tochas espacadas pelo caminho.
+#11I: Entrar na caverna
+#TRANQ: Se afastar e seguir caminho

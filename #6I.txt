@@ -1,4 +1,4 @@
-Voce continua sua jornada e encontra uma Armadura de Ferro jogada em um velho suporte. Ela parece pesada, mas muito resistente..
-I: armadura;r;1;9;14
+Apos uma longa e dura batalha, voce leva o golpe fatal e cai desacordado. Sem a nocao do tempo corrido, voce acorda em uma cabana desconhecida, sem saber como chegou ao local. Olhando em volta, voce avista um escudo de madeira. Apesar de antigo, esta bem conservado.
+I: escudo de madeira;r;1;8;3
 #7: Pegar
-#8: Ignorar
+#7: Ignorar

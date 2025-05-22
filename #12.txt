@@ -1,3 +1,0 @@
-Item Recolhido! Escolha uma direcao para seguir.
-#5M: Direita
-#5: Esquerda

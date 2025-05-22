@@ -1,0 +1,4 @@
+Adentrando na caverna, o volume da melodia aumenta a cada passo que voce da. O caminho o conduz ate o final da caverna. La, voce se depara com uma forte luz erradiada por um objeto sobre uma pedra. Ao se aproximar, encontra-se um amuleto de outro com uma grande pedra vermelha no centro.
+I: amuleto magico;c;0;0;0
+#12M: Pegar
+#TRANQ: Se afastar e sair da caverna

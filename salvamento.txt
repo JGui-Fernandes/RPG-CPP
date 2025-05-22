@@ -1,5 +1,21 @@
-P: )°);10;16;10;5;0;0
+P: Ðúj;10;34;10;5;4;0
+I: espada;w;1;8;10
+I: capacete de metal;r;1;5;3
+I: amuleto magico;c;0;0;0
+I: peitoral de metal;r;1;9;5
 #1
-#3
-#4M
-#13
+#2I
+#2M
+#5
+#8M
+#9I
+#10
+#11I
+#12M
+#14I
+#15
+#18
+#19M
+#16I
+#CHEFAOM
+#DERROTA

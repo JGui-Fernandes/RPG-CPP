@@ -1,3 +1,0 @@
-Mesmo usando todas as suas forcas, voce nao foi capaz de derrotar seu adversario dessa vez. Mas, se quiser, pode continuar tentando.
-#9: Continuar
-#14: Encerrar Jogo

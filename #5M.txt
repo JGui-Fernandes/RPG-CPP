@@ -1,11 +1,11 @@
-Voce caminha pela beira do rio coberto de nevoa. A agua escura se move devagar. De repente, uma criatura enorme surge do rio, com algas pendendo do corpo e olhos brilhantes. Ela avanca em sua direcao.
-N: Monstro do Rio
-H: 7
-S: 9
-E: 13
-T: 980
-P: 1
-I: chave;c;1;0;0
-10;11
+Ao correr para longe, voce adentra cada vez mais na floresta. Quando se da por conta, a grama deu lugar a lama, uma nevoa espessa o envolve e voce percebe que encontrou o Pantano Neblinoso. Saindo da terra, uma criatura lamacenta surge diante de voce.
+N: Monstro de lama
+H: 8
+S: 7
+E: 18
+T: 150
+P: 2
+I: anel;c;0;0;0
+5;6I
 #1: Lutar
-#5: Fugir
+#6M: Fugir

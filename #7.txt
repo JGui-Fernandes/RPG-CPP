@@ -1,3 +1,2 @@
-Item Recolhido! Escolha uma direcao para seguir.
-#4M: Direita
-#9: Esquerda
+Depois do repouso voce se sente com as energias renovadas e pronto para continuar a aventura. Saindo da cabana, voce percebe que ainda esta na mesma floresta de antes. 
+#5: Seguir jornada

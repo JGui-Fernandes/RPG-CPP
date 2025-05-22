@@ -85,7 +85,7 @@ char* GerenciadorHistoria::lerRespostaERetornaCena(Cena* ce){
     int escolha;
     cin >> escolha;
 
-    if(strcmp(ce->getOpcao(escolha-1), "Encerrar Jogo.")==0){
+    if(strcmp(ce->getOpcao(escolha-1), "Encerrar Jogo")==0){
         encerrador();
     }
 
@@ -246,7 +246,10 @@ void GerenciadorHistoria::batalha(Personagem* p, Monstro* m){
     }
 
     cout << "\n FIM DO COMBATE \n" << endl;
-    if(m->getEnergia() < 0){
+
+    p->setEnergia(p->getEnergia()+5);
+    p->setProvisoes(5);
+    if(m->getEnergia() < 1){
         cout << "\nVoce venceu!\n" << endl;
         abrirCena(m->getVitoria());
     }
@@ -275,7 +278,7 @@ Item* GerenciadorHistoria::escolherAcaoBatalha(Personagem* p, Item* armas[10], I
 
     cin >> resposta;
 
-    if(resposta > 0 && resposta < *qtdeArmas+2){
+    if(resposta > 0 && resposta < *qtdeArmas+3){
         if(resposta == 1){
                 if(p->getProvisao() > 0){
                     p->consumirProvisao();
@@ -286,8 +289,12 @@ Item* GerenciadorHistoria::escolherAcaoBatalha(Personagem* p, Item* armas[10], I
                     escolherAcaoBatalha(p, armas, armaduras, qtdeArmas, qtdeArmaduras);
                 }
         }
-        else{
+
+        else if(resposta < *qtdeArmas+2){
             return armas[resposta-2];
+        }
+        else{
+            return new Item("soco", W, 1, 5, 4);
         }
 
     }
@@ -323,9 +330,13 @@ void GerenciadorHistoria::separaArmaduras(Item* armaduras[10], Personagem* p, in
 
 void GerenciadorHistoria::imprimeAtaque(Item* armas[10], int qtde){
     int escolha = 0;
-    for(int i = 0; i < qtde; i++){
+    int i = 0;
+    for(i = 0; i < qtde; i++){
         cout << i+2 << ") Atacar com " << armas[i]->getNome() << endl;
     }
+    i += 2;
+    cout << i<<") Atacar com soco" << endl;
+
     cout << "\n" << endl;
 }
 
@@ -334,7 +345,7 @@ void GerenciadorHistoria::atacar(Item* arma, int faDefesa, Personagem* ataque, P
     int dano = arma->getDano();
 
     cout << "\nValor do dado: " << valorDado << "\n" << endl;
-    int golpe = valorDado + ataque->getHabilidade();
+    int golpe = valorDado + ataque->getSorte();
     if(golpe >= faDefesa){
         cout << "Acertou o golpe!\n" << endl;
         cout << "Dano total: " << dano << "\n" << endl;
@@ -347,14 +358,14 @@ void GerenciadorHistoria::atacar(Item* arma, int faDefesa, Personagem* ataque, P
 
 void GerenciadorHistoria::sofrerAtaque(int faDefesa, Personagem* ataque, Personagem* defesa, Item* armaduras[10], int qtdeArmadura){
     int valorDado = sortearValor();
-    int dano = 6 - getDanoReduzido(armaduras, qtdeArmadura);
+    int dano = ataque->getHabilidade() - getDanoReduzido(armaduras, qtdeArmadura);
 
     if(dano < 0){
         dano = 0;
     }
 
     cout << "\nValor do dado: " << valorDado << "\n" << endl;
-    int golpe = valorDado + ataque->getHabilidade();
+    int golpe = valorDado + ataque->getSorte();
     if(golpe >= faDefesa){
         cout << "Acertou o golpe!\n" << endl;
         cout << "Dano total: " << dano << "\n" << endl;

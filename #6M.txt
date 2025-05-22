@@ -1,0 +1,10 @@
+Voce tenta fugir novamente, mas desta vez algo o impede. Ao correr, voce sente sua perna sendo puxada cada vez mais para dentro da lama. Ate nao conseguir mais caminhar. Logo em seguida, o Monstro de Lama lhe persegue lentamente, ate chegar ao seu encontro.
+N: Monstro de lama
+H: 8
+S: 10
+E: 18
+T: 150
+P: 2
+I: anel;c;0;0;0
+5;6I
+#1: Lutar

@@ -5,6 +5,7 @@
 
 #include "Cena.h"
 #include "Personagem.h"
+#include "Util.h"
 
 using namespace std;
 
@@ -28,10 +29,6 @@ class SalvarHistoria{
 
         void lerArquivo();
 
-        char* converteStringParaChar(string texto);
-        int converteCharParaInt(char* texto);
-        int converteStringParaInt(string texto);
-        char* removeChar(char* texto, char* divisor);
         char converteTipo(int antigo);
 
     private:
@@ -39,4 +36,5 @@ class SalvarHistoria{
         char* cenas[20];
         int qtdeCenas;
         char* arquivo;
+        Util util;
 };

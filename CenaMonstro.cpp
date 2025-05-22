@@ -66,17 +66,17 @@ CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
             if(i == 8){
                 vitDer = linha;
             }
-            char* resultado = converteStringParaChar(linha);
-            linhas[i] = removeChar(resultado, ": ");
+            char* resultado = util.converteStringParaChar(linha);
+            linhas[i] = util.removeChar(resultado, ": ");
         }
 
         cm.setDescricao(linhas[0]);
         m->setNome(linhas[1]);
-        m->setHabilidade(converteCharParaInt(linhas[2]));
-        m->setSorte(converteCharParaInt(linhas[3]));
-        m->setEnergia(converteCharParaInt(linhas[4]));
-        m->setTesouro(converteCharParaInt(linhas[5]));
-        m->setProvisoes(converteCharParaInt(linhas[6]));
+        m->setHabilidade(util.converteCharParaInt(linhas[2]));
+        m->setSorte(util.converteCharParaInt(linhas[3]));
+        m->setEnergia(util.converteCharParaInt(linhas[4]));
+        m->setTesouro(util.converteCharParaInt(linhas[5]));
+        m->setProvisoes(util.converteCharParaInt(linhas[6]));
 
         string v = "#";
         string d = "#";
@@ -98,8 +98,8 @@ CenaMonstro CenaMonstro::lerArquivo(char* nomeArquivo) {
 
         i->constroiItem(it);
 
-        char* charV = converteStringParaChar(v);
-        char* charD = converteStringParaChar(d);
+        char* charV = util.converteStringParaChar(v);
+        char* charD = util.converteStringParaChar(d);
 
         m->setDerrota(charD);
         m->setVitoria(charV);

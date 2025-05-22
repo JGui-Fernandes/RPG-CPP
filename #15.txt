@@ -1,0 +1,3 @@
+Saindo da caverna e seguindo pela estrada, voce observa que a estrada atravessa por uma pequena vila.
+#16: Seguir o caminho e atravessar o centro da vila
+#18: Contornar a vila, passando pela floresta

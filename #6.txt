@@ -1,3 +1,0 @@
-Voce chegou na caverna.
-#2M: Entrar na caverna
-#5: Nao entrar na caverna

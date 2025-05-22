@@ -1,0 +1,4 @@
+A clareira se fecha atras de voce, e uma antiga trilha entre as arvores o conduz ate uma ruina coberta por musgo. No centro, sobre um altar de pedra com inscricoes antigas, repousam duas glaives envoltas em energia azulada. Voce sente que foram deixadas ali por uma razao, como se estivessem te esperando.
+I: glaives flamejantes;w;1;10;18
+#CHEFAOM: Pegar
+#CHEFAOM: Ignorar 

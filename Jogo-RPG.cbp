@@ -64,6 +64,8 @@
 		<Unit filename="SalvarHistoria.cpp" />
 		<Unit filename="SalvarHistoria.h" />
 		<Unit filename="TipoItem.h" />
+		<Unit filename="Util.cpp" />
+		<Unit filename="Util.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

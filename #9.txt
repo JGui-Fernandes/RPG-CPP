@@ -1,4 +1,3 @@
-A trilha continua a frente, ainda encoberta por nevoa leve. Continue em frente ou dobre na trilha de pedras
-#5: Seguir em frente
-#2: Trilha de pedras
-#14: Dobrar a esquerda
+Voce cai desacordado. E apos algum tempo, acorda novamente. Seu corpo esta muito dolorido e machucado, mas tudo ao seu redor parece normal. Nenhuma arvore suspeita ou diferentes das demais. Apesar da dor, voce consegue se levantar e caminhar normalmente.
+#10: Seguir jornada
+#5: Voltar o caminho e procurar pela arvore

@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include "Util.h"
 
 using namespace std;
 
@@ -34,13 +35,10 @@ class Cena{
         void lerOpcoes(char* nomeArquivo);
 
         void separarOpcoes(char* entradas[3]);
-        char* converteStringParaChar(string texto);
-        int converteCharParaInt(char* texto);
-        int converteStringParaInt(string texto);
 
     protected:
         void copiarCena(Cena& outra);
-        char* removeChar(char* texto, char* divisor);
+        Util util;
 
     private:
         char* descricao;

@@ -1,0 +1,11 @@
+Pegando o amuleto, voce sente uma forca energizando seu corpo e uma voz rouca e suave sussurra ao seu ouvido "Voce eh o escolhido...", fazendo seu corpo ficar totalmente arrepiado e tremulo. Em seguida, se ouve outra voz, desta vez mais firme e mais forte, dizendo "ESTE AMULETO PERTENCE AO MESTRE DAS SOMBRAS". Logo em seguida, uma criatura sombria surge da escuridao da caverna.
+N: Cavaleiro Sombrio
+H: 10
+S: 6
+E: 20
+T: 500
+P: 1
+I: escudo;r;0;0;0
+14I;DERROTA
+#3: Lutar
+#13M: Fugir

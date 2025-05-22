@@ -1,0 +1,4 @@
+Voce adentrando a vila, voce nota que, apesar de nao ser um grande centro, a cidade possui diversas opcoes de comercio, como tabernas, hotelarias, entre outras lojas. 
+#16M: Procurar uma hotelaria para passar a noite.
+#16M: Procurar uma taberna para fazer uma refeicao.
+#19M: Seguir jornada.

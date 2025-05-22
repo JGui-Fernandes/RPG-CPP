@@ -59,7 +59,7 @@ CenaItem CenaItem::lerArquivo(char* nomeArquivo){
     getline(entrada, linha2);
 
     char* linha1Final;
-    linha1Final = converteStringParaChar(linha1);
+    linha1Final = util.converteStringParaChar(linha1);
 
     ci.setDescricao(linha1Final);
 
